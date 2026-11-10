@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 200" fill="none" class="svg-outline" aria-hidden="true">
+    <!-- Outline Line-Art Mesin Espresso Komersial (Mesin Seduh Senja) -->
+    <!-- Rak Pemanas Cangkir Atas -->
+    <path class="outline-path" d="M 25 25 L 425 25 L 415 48 L 35 48 Z" stroke="#FFFDF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path class="outline-path" d="M 45 15 L 45 25 M 140 15 L 140 25 M 235 15 L 235 25 M 330 15 L 330 25 M 405 15 L 405 25" stroke="#FFFDF9" stroke-width="2" stroke-linecap="round" />
+    <path class="outline-path" d="M 45 15 L 405 15" stroke="#FFFDF9" stroke-width="2" stroke-linecap="round" />
+    <!-- Bodi Utama Mesin -->
+    <path class="outline-path" d="M 15 48 L 435 48 L 430 148 L 20 148 Z" stroke="#FFFDF9" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" />
+    <line class="outline-path" x1="15" y1="95" x2="435" y2="95" stroke="#FFFDF9" stroke-width="2" />
+    <!-- Dua Group Head & Portafilter -->
+    <!-- Group 1 -->
+    <path class="outline-path" d="M 120 95 L 120 115 L 155 115 L 155 95" stroke="#FFFDF9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <path class="outline-path" d="M 115 115 L 160 115 L 175 125 L 205 125" stroke="#FFFDF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path class="outline-path" d="M 132 115 L 130 135 M 145 115 L 147 135" stroke="#FFFDF9" stroke-width="2" />
+    <!-- Group 2 -->
+    <path class="outline-path" d="M 280 95 L 280 115 L 315 115 L 315 95" stroke="#FFFDF9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <path class="outline-path" d="M 275 115 L 320 115 L 335 125 L 365 125" stroke="#FFFDF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path class="outline-path" d="M 292 115 L 290 135 M 305 115 L 307 135" stroke="#FFFDF9" stroke-width="2" />
+    <!-- Tongkat Uap (Steam Wand) -->
+    <path class="outline-path" d="M 45 95 L 40 130 L 52 145" stroke="#FFFDF9" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+    <path class="outline-path" d="M 395 95 L 400 130 L 388 145" stroke="#FFFDF9" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Drip Tray & Kaki Mesin -->
+    <rect class="outline-path" x="18" y="148" width="414" height="20" rx="3" stroke="#FFFDF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path class="outline-path" d="M 50 168 L 45 186 L 65 186 L 60 168" stroke="#FFFDF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path class="outline-path" d="M 390 168 L 385 186 L 405 186 L 400 168" stroke="#FFFDF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+

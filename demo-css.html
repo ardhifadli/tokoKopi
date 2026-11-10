@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demonstrasi dan penjelasan tiga metode penerapan CSS (Inline, Internal, External) serta urutan spesifisitas hierarki styling pada web Kopi Senja Surabaya.">
+
+    <title>Kopi Senja — Demo Metode CSS</title>
+
+    <!-- Favicon Kopi Senja -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- METODE 3: External CSS (Direkomendasikan untuk seluruh proyek) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- METODE 2: Internal CSS (Styling lokal dalam tag <style> di <head>) -->
+    <style>
+        .contoh-internal {
+            background-color: #FEF8EC;
+            color: #8B5A3C;
+            padding: 1rem 1.25rem;
+            border-left: 4px solid #B46A14;
+            border-radius: 0.5rem;
+            font-weight: 600;
+        }
+
+        .tabel-prioritas {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .tabel-prioritas th,
+        .tabel-prioritas td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(139, 90, 60, 0.2);
+            font-size: 0.95rem;
+        }
+
+        .tabel-prioritas th {
+            background: #EFE4D3;
+            color: #2B1B12;
+            font-weight: 700;
+        }
+
+        .badge-tingkat {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 9999px;
+            font-size: 0.78rem;
+            font-weight: 700;
+        }
+
+        .tingkat-1 { background: #FBF0F2; color: #6B1D2F; border: 1px solid #6B1D2F; }
+        .tingkat-2 { background: #FEF8EC; color: #B46A14; border: 1px solid #B46A14; }
+        .tingkat-3 { background: #EEF6F2; color: #2D5A43; border: 1px solid #2D5A43; }
+        .tingkat-4 { background: #E8D9C5; color: #2B1B12; border: 1px solid #8B5A3C; }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header & Navigasi Editorial Kopi Senja -->
+    <header class="header-lebar">
+        <div class="header-brand">
+            <a href="index.html" class="brand-title">
+                ☕ Kopi Senja
+            </a>
+            <span class="brand-est">Ruang Singgah di Surabaya · Est. 2023</span>
+        </div>
+
+        <div class="nav-wrap">
+            <nav>
+                <a href="index.html">Beranda</a>
+                <a href="menu.html">Katalog Menu</a>
+                <a href="tentang.html">Tentang Kami</a>
+                <a href="kontak.html">Lokasi &amp; Kontak</a>
+                <a href="demo-css.html" aria-current="page">Demo CSS</a>
+            </nav>
+            <div class="lang-switch" title="Pilihan Bahasa">
+                <strong class="lang-active">ID</strong> | <span class="lang-inactive">EN</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Konten Utama Halaman Demo CSS -->
+    <main class="halaman-tentang">
+        <h1>Demonstrasi &amp; Pembelajaran Metode CSS</h1>
+
+        <p class="lead">
+            Halaman edukatif ini memperlihatkan tiga cara penerapan CSS dalam perancangan web, lengkap dengan analisis urutan prioritas dan spesifisitas <em>Cascade</em>.
+        </p>
+
+        <!-- Metode 1: Inline CSS -->
+        <section class="kartu">
+            <h2>1. Inline CSS (Gaya Baris)</h2>
+
+            <!-- Contoh nyata penerapan Inline CSS -->
+            <p style="color: #A34A22; font-weight: bold; background: #FFF9F0; padding: 0.75rem 1rem; border-left: 4px solid #A34A22; border-radius: 0.4rem;">
+                Ini adalah teks yang diwarnai langsung menggunakan atribut style="..." (Inline CSS).
+            </p>
+
+            <p>
+                <strong>Cara Kerja:</strong> Deklarasi gaya ditulis langsung pada atribut <code>style</code> di dalam tag elemen HTML bersangkutan.
+            </p>
+            <p>
+                <strong>Kelebihan:</strong> Berguna untuk perbaikan cepat satu elemen tertentu atau pengujian darurat.<br>
+                <strong>Kekurangan:</strong> Sulit dirawat, memperbesar ukuran berkas HTML, dan melanggar prinsip pemisahan struktur dan tampilan (<em>Separation of Concerns</em>).
+            </p>
+        </section>
+
+        <!-- Metode 2: Internal CSS -->
+        <section class="kartu">
+            <h2>2. Internal CSS (Gaya Tersemat)</h2>
+
+            <!-- Contoh nyata penerapan Internal CSS -->
+            <p class="contoh-internal">
+                Ini adalah blok teks yang dihias melalui tag &lt;style&gt; di dalam bagian &lt;head&gt; halaman ini.
+            </p>
+
+            <p>
+                <strong>Cara Kerja:</strong> Seluruh aturan CSS ditempatkan di dalam tag <code>&lt;style&gt;</code> pada bagian <code>&lt;head&gt;</code> dokumen HTML yang sama.
+            </p>
+            <p>
+                <strong>Kelebihan:</strong> Menampung aturan khusus untuk satu halaman tertentu tanpa mempengaruhi halaman web lain.<br>
+                <strong>Kekurangan:</strong> Tidak dapat digunakan bersama antarhalaman sehingga terjadi duplikasi kode saat situs memiliki banyak berkas.
+            </p>
+        </section>
+
+        <!-- Metode 3: External CSS -->
+        <section class="kartu">
+            <h2>3. External CSS (Gaya Eksternal)</h2>
+
+            <p class="lead">
+                Seluruh tampilan visual situs Kopi Senja (tipografi, tombol, kartu produk, dan navigasi) dikendalikan melalui berkas eksternal <code>style.css</code>.
+            </p>
+
+            <p>
+                <strong>Cara Kerja:</strong> Aturan CSS disimpan pada berkas terpisah berekstensi <code>.css</code> dan dihubungkan ke berkas HTML menggunakan tag <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>.
+            </p>
+            <p>
+                <strong>Kelebihan (Standar Industri):</strong> Sangat efisien, menerapkan prinsip DRY (<em>Don't Repeat Yourself</em>), mendukung caching peramban web sehingga muat lebih cepat, dan mempermudah pemeliharaan jangka panjang.
+            </p>
+        </section>
+
+        <!-- Kesimpulan & Tabel Prioritas CSS Cascade -->
+        <section class="kartu">
+            <h2>Urutan Prioritas Gaya (CSS Cascade Hierarchy)</h2>
+
+            <p>
+                Jika suatu elemen dikenai aturan penataan dari berbagai metode secara bersamaan, peramban (browser) akan menentukan tampilan akhir berdasarkan hierarki kekuatan berikut:
+            </p>
+
+            <table class="tabel-prioritas">
+                <thead>
+                    <tr>
+                        <th>Tingkat Prioritas</th>
+                        <th>Metode Styling</th>
+                        <th>Kekuatan Spesifisitas</th>
+                        <th>Contoh Sintaks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="badge-tingkat tingkat-1">Prioritas 1 (Tertinggi)</span></td>
+                        <td><strong>Inline CSS</strong></td>
+                        <td>Mengalahkan internal dan external</td>
+                        <td><code>&lt;p style="color: red;"&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge-tingkat tingkat-2">Prioritas 2</span></td>
+                        <td><strong>Internal CSS</strong></td>
+                        <td>Berlaku pada satu dokumen HTML</td>
+                        <td><code>&lt;style&gt; p { color: blue; } &lt;/style&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge-tingkat tingkat-3">Prioritas 3</span></td>
+                        <td><strong>External CSS</strong></td>
+                        <td>Standar modular terpadu</td>
+                        <td><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge-tingkat tingkat-4">Prioritas 4 (Terendah)</span></td>
+                        <td><strong>Browser Default</strong></td>
+                        <td>Gaya bawaan User-Agent</td>
+                        <td>Default serif/sans-serif peramban</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p style="margin-top: 1.25rem; font-size: 0.92rem; color: var(--latte);">
+                <em>*Catatan Tambahan: Deklarasi <code>!important</code> dapat membalikkan hierarki ini, namun penggunaan terbaik adalah merancang selektor spesifik (ID &gt; Class &gt; Tag) tanpa bergantung pada <code>!important</code>.</em>
+            </p>
+        </section>
+
+        <!-- Garis Pemisah -->
+        <hr class="pemisah">
+    </main>
+
+    <!-- Footer Lengkap & Proporsional -->
+    <footer class="footer-lebar">
+        <div class="footer-container">
+            <!-- Kolom 1: Merek & Profil -->
+            <div class="footer-col">
+                <h4>☕ Kopi Senja Surabaya</h4>
+                <p>
+                    Lahir dari kehangatan seduhan, bertumbuh bersama Kawan Senja. Ruang singgah sederhana untuk berbagi cerita di ujung hari.
+                </p>
+                <div class="footer-badge-kota">
+                    📍 Surabaya, Jawa Timur · Indonesia
+                </div>
+            </div>
+
+            <!-- Kolom 2: Tautan Halaman -->
+            <div class="footer-col">
+                <h4>Tautan Halaman</h4>
+                <ul>
+                    <li><a href="index.html">Beranda Utama</a></li>
+                    <li><a href="menu.html">Katalog Menu &amp; Kasir</a></li>
+                    <li><a href="tentang.html">Tentang &amp; Semesta Senja</a></li>
+                    <li><a href="kontak.html">Lokasi &amp; Kontak</a></li>
+                    <li><a href="demo-css.html">Demo Metode CSS</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Waktu Operasional -->
+            <div class="footer-col">
+                <h4>Waktu Operasional</h4>
+                <div class="jadwal-box">
+                    <div class="jadwal-item">
+                        <span class="jadwal-hari">Senin – Jumat</span>
+                        <span class="jadwal-jam">09.00 – 22.00 WIB</span>
+                    </div>
+                    <div class="jadwal-item">
+                        <span class="jadwal-hari">Sabtu – Minggu</span>
+                        <span class="jadwal-jam">08.00 – 22.30 WIB</span>
+                    </div>
+                </div>
+                <p class="footer-layanan-info">
+                    Menerima pesanan mandiri di tempat (Dine-in) dan bawa pulang (Take-away).
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 Kopi Senja Surabaya. Semua hak dilindungi.</span>
+            <span class="footer-bottom-senja">Dirancang dengan cinta untuk Kawan Senja.</span>
+        </div>
+    </footer>
+
+    <!-- JavaScript Terpadu -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

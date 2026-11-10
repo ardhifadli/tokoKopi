@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Konfirmasi Pesanan &amp; Reservasi Kopi Senja Surabaya — Terima kasih telah menjadi bagian dari cerita hangat Kawan Senja.">
+
+    <title>Kopi Senja — Terima Kasih</title>
+
+    <!-- Favicon Kopi Senja -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- Google Fonts: Permanent Marker (Judul) & Courier Prime (Mesin Tik) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CDN (Slide 6 Rubrik UTS) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- CSS Eksternal Terpadu (Sesuai Struktur UTS: css/style.css) -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Skip-Link untuk Aksesibilitas Keyboard (Slide 4 Rubrik UTS) -->
+    <a href="#main" class="skip-link">Lewati ke konten utama</a>
+
+    <!-- Header & Navigasi Editorial Kopi Senja -->
+    <header class="header-lebar">
+        <div class="header-brand">
+            <a href="index.html" class="brand-title">
+                ☕ Kopi Senja
+            </a>
+            <span class="brand-est">Ruang Singgah di Surabaya · Est. 2023</span>
+        </div>
+
+        <div class="nav-wrap">
+            <nav>
+                <a href="index.html">Beranda</a>
+                <a href="menu.html">Katalog Menu</a>
+                <a href="tentang.html">Tentang Kami</a>
+                <a href="kontak.html">Lokasi &amp; Kontak</a>
+            </nav>
+            <div class="lang-switch" title="Pilihan Bahasa">
+                <strong class="lang-active">ID</strong> | <span class="lang-inactive">EN</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Konten Utama Konfirmasi Terima Kasih -->
+    <main class="halaman-tentang" id="main">
+
+        <!-- Figure Semantik Kartu Ucapan Hangat -->
+        <figure class="hero-media">
+            <img src="images/banner-kawan-senja.jpg" alt="Kehangatan Suasana Kawan Senja" class="banner-komik-senja">
+            <figcaption class="caption-senja">Setiap sapaan dan kehadiranmu adalah detak jantung kehangatan Kopi Senja Surabaya.</figcaption>
+        </figure>
+
+        <section class="kartu" style="text-align: center; max-width: 680px; margin: 0 auto;">
+            <div style="font-size: 3rem; margin-bottom: 0.5rem;">☕✨</div>
+            <h1>Pesanmu Telah Kami Terima!</h1>
+
+            <p class="lead" id="ucapanPribadi">
+                Terima kasih telah menyapa dan mempercayakan waktu singgahmu bersama Kopi Senja Surabaya.
+            </p>
+
+            <div class="rekap-konfirmasi-box" id="rekapBox" style="text-align: left; background: var(--card-surface); padding: 1.25rem 1.5rem; border: 1.5px dashed var(--latte); border-radius: 6px; margin: 1.5rem 0;">
+                <h2 style="font-size: 1.15rem; margin-top: 0; color: var(--terra);">Ringkasan Formulir yang Dikirimkan:</h2>
+                <p><strong>Nama Kawan:</strong> <span id="outNama">Kawan Senja</span></p>
+                <p><strong>Email Kontak:</strong> <span id="outEmail">-</span></p>
+                <p id="rowTanggal"><strong>Rencana Kunjungan:</strong> <span id="outTanggal">-</span></p>
+                <p id="rowArea"><strong>Area yang Dipilih:</strong> <span id="outArea">Ruang Singgah Utama</span></p>
+                <p id="rowWaktu"><strong>Waktu Singgah:</strong> <span id="outWaktu">Waktu Senja</span></p>
+                <p id="rowPesan" style="margin-bottom: 0;"><strong>Catatan untuk Barista:</strong> <em>&ldquo;<span id="outPesan">-</span>&rdquo;</em></p>
+            </div>
+
+            <p style="color: var(--latte); font-size: 0.95rem;">
+                Barista kami akan segera mengonfirmasi ketersediaan meja atau membalas sapaanmu melalui WhatsApp / Email dalam waktu 1&times;24 jam.
+            </p>
+
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                <a href="menu.html" class="tombol">
+                    Lihat Katalog &amp; Kasir Menu →
+                </a>
+                <a href="index.html" class="tombol-outline">
+                    Kembali ke Beranda
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Lengkap & Proporsional -->
+    <footer class="footer-lebar">
+        <div class="footer-container">
+            <!-- Kolom 1: Merek & Profil -->
+            <div class="footer-col">
+                <h4>☕ Kopi Senja Surabaya</h4>
+                <p>
+                    Lahir dari kehangatan seduhan, bertumbuh bersama Kawan Senja. Ruang singgah sederhana untuk berbagi cerita di ujung hari.
+                </p>
+                <div class="footer-badge-kota">
+                    📍 Surabaya, Jawa Timur · Indonesia
+                </div>
+            </div>
+
+            <!-- Kolom 2: Tautan Halaman -->
+            <div class="footer-col">
+                <h4>Tautan Halaman</h4>
+                <ul>
+                    <li><a href="index.html">Beranda Utama</a></li>
+                    <li><a href="menu.html">Katalog Menu &amp; Kasir</a></li>
+                    <li><a href="tentang.html">Tentang &amp; Semesta Senja</a></li>
+                    <li><a href="kontak.html">Lokasi &amp; Kontak</a></li>
+                    <li><a href="terima-kasih.html">Konfirmasi Pesanan</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Waktu Operasional -->
+            <div class="footer-col">
+                <h4>Waktu Operasional</h4>
+                <div class="jadwal-box">
+                    <div class="jadwal-item">
+                        <span class="jadwal-hari">Senin – Jumat</span>
+                        <span class="jadwal-jam">09.00 – 22.00 WIB</span>
+                    </div>
+                    <div class="jadwal-item">
+                        <span class="jadwal-hari">Sabtu – Minggu</span>
+                        <span class="jadwal-jam">08.00 – 22.30 WIB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 Kopi Senja Surabaya. Semua hak dilindungi.</span>
+            <span class="footer-bottom-senja">Dirancang dengan cinta untuk Kawan Senja.</span>
+        </div>
+    </footer>
+
+    <!-- Script Baca Query Parameter GET -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const params = new URLSearchParams(window.location.search);
+            const nama = params.get('nama');
+            const email = params.get('email');
+            const tanggal = params.get('tanggal');
+            const area = params.get('area_kedai');
+            const waktu = params.get('waktu_singgah');
+            const pesan = params.get('pesan');
+
+            if (nama) {
+                document.getElementById('outNama').textContent = nama;
+                document.getElementById('ucapanPribadi').textContent =
+                    'Halo Kawan ' + nama + ', formulir reservasi dan pesan hangatmu telah berhasil kami terima!';
+            }
+            if (email) document.getElementById('outEmail').textContent = email;
+            if (tanggal) document.getElementById('outTanggal').textContent = tanggal;
+            if (area) document.getElementById('outArea').textContent = area;
+            if (waktu) document.getElementById('outWaktu').textContent = waktu;
+            if (pesan) document.getElementById('outPesan').textContent = pesan;
+        });
+    </script>
+
+    <!-- Bootstrap 5.3 Bundle JS CDN (Slide 6 Rubrik UTS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>

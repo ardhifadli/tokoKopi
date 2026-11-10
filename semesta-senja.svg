@@ -1,0 +1,445 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="auto" role="img" aria-labelledby="mapTitle mapDesc">
+  <title id="mapTitle">Peta Isometrik Semesta Kopi Senja Surabaya</title>
+  <desc id="mapDesc">Peta tata kota isometrik presisi tinggi menampilkan ekosistem Kopi Senja di Surabaya: Kedai Utama, Ruang Kawan, Dapur Roastery, Stasiun Kereta, dan Halte Bus.</desc>
+
+  <defs>
+    <!-- Filter Bayangan Halus untuk Label -->
+    <filter id="softShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2.5" flood-color="#2B1B12" flood-opacity="0.12"/>
+    </filter>
+
+    <style>
+      .bg-canvas { fill: #F5EBDD; }
+      
+      /* Garis Tinta Arsitektur */
+      .ink-thick { stroke: #2B1B12; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+      .ink-med   { stroke: #2B1B12; stroke-width: 2.0; stroke-linecap: round; stroke-linejoin: round; }
+      .ink-thin  { stroke: #2B1B12; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+      
+      /* Palet Warna Bangunan dan Fasad */
+      .f-white   { fill: #FFFDF9; stroke: #2B1B12; stroke-width: 2; stroke-linejoin: round; }
+      .f-cream   { fill: #F4E7D7; stroke: #2B1B12; stroke-width: 2; stroke-linejoin: round; }
+      .f-shadow  { fill: #DECBB3; stroke: #2B1B12; stroke-width: 2; stroke-linejoin: round; }
+      .f-roof    { fill: #EBE0D0; stroke: #2B1B12; stroke-width: 2; stroke-linejoin: round; }
+      .f-terra   { fill: #A34A22; stroke: #2B1B12; stroke-width: 2; stroke-linejoin: round; }
+      .f-dark    { fill: #2B1B12; }
+      
+      /* Kaca dan Interior */
+      .glass-light { fill: #EBF4F7; stroke: #2B1B12; stroke-width: 1.5; }
+      .glass-warm  { fill: #FFF2D4; stroke: #2B1B12; stroke-width: 1.5; }
+      
+      /* Jalan Raya dan Lanskap */
+      .road-surface { fill: #E5D5C1; stroke: #2B1B12; stroke-width: 2; }
+      .pavement     { fill: #EFE3D3; stroke: #2B1B12; stroke-width: 1.8; }
+      .water-blue   { fill: #CEE5ED; stroke: #2B1B12; stroke-width: 2; }
+      .tree-crown   { fill: #5E8563; stroke: #2B1B12; stroke-width: 2; }
+      .tree-dark    { fill: #48684C; stroke: #2B1B12; stroke-width: 2; }
+      
+      /* Label Petunjuk Khas Kopi Senja (Terakota Organik dan Bersih) */
+      .callout-tag { fill: #FFFDF9; stroke: #A34A22; stroke-width: 1.8; rx: 5; }
+      .callout-txt { font-family: 'Comic Sans MS', 'Chalkboard SE', 'Trebuchet MS', cursive, sans-serif; font-size: 11px; font-weight: 700; fill: #A34A22; letter-spacing: 0.5px; }
+      .callout-arrow { stroke: #A34A22; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .callout-dot { fill: #A34A22; }
+
+      /* Animasi Halus Saat Interaksi */
+      .gedung { transition: transform 0.25s ease; cursor: pointer; }
+      .gedung:hover { transform: translateY(-3px); }
+    </style>
+  </defs>
+
+  <!-- Kanvas Kertas Krem Hangat -->
+  <rect width="1200" height="680" class="bg-canvas"/>
+
+
+  <!-- ================= 1. JUDUL UTAMA KANAN ATAS (LEGA dan ISOLATED) ================= -->
+  <g transform="translate(820, 45)">
+    <!-- Stabilo Oranye Terakota Baris 1 -->
+    <rect x="-6" y="2" width="250" height="24" fill="#A34A22" opacity="0.32" rx="3"/>
+    <text x="0" y="20" font-family="Georgia, serif" font-weight="900" font-size="20" fill="#2B1B12" letter-spacing="2">
+      SELAMAT DATANG
+    </text>
+    
+    <!-- Stabilo Oranye Terakota Baris 2 -->
+    <rect x="-6" y="34" width="310" height="28" fill="#A34A22" opacity="0.38" rx="3"/>
+    <text x="0" y="56" font-family="Georgia, serif" font-weight="900" font-size="25" fill="#2B1B12" letter-spacing="2.5">
+      DI SEMESTA SENJA
+    </text>
+  </g>
+
+
+  <!-- ================= 2. TEKS BRANDING KIRI BAWAH ================= -->
+  <g transform="translate(50, 620)">
+    <text x="0" y="16" font-family="'Comic Sans MS', cursive, sans-serif" font-size="16" font-weight="bold" fill="#2B1B12">
+      menemani cerita kawan di <tspan fill="#A34A22" font-size="18">Surabaya</tspan>
+    </text>
+    <text x="0" y="38" font-family="'Comic Sans MS', cursive, sans-serif" font-size="15" font-weight="bold" fill="#2B1B12">
+      dan akan terus bertumbuh.
+    </text>
+  </g>
+
+
+  <!-- ================= 3. DANAU dan TAMAN KANAN BAWAH ================= -->
+  <g transform="translate(840, 560)">
+    <path d="M0 30 Q50 5 130 15 Q200 25 240 55 Q180 85 110 85 Q30 85 -10 50 Z" class="water-blue"/>
+    <path d="M40 38 Q65 32 90 38 M130 45 Q155 40 180 45 M70 60 Q100 55 130 60" stroke="#8BB2C2" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <circle cx="35" cy="34" r="4" class="f-shadow"/>
+    <circle cx="42" cy="32" r="3" class="f-white"/>
+    <path d="M-12 40 L-6 24 L0 40 L6 20 L12 40" stroke="#587C5E" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M230 45 L236 28 L242 45 L248 24 L254 45" stroke="#587C5E" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+
+
+  <!-- ================= 4. JALUR JALAN RAYA ISOMETRIK ================= -->
+  <!-- Badan Jalan Aspal Diagonal -->
+  <polygon points="180,410 720,135 1180,365 640,640" class="road-surface"/>
+  
+  <!-- Trotoar Pejalan Kaki Depan Ruko -->
+  <polygon points="320,340 720,135 1180,365 780,565" class="pavement"/>
+  <polygon points="350,355 730,165 1170,380 790,570" class="road-surface"/>
+
+  <!-- Marka Jalan Putus-Putus Putih -->
+  <g stroke="#FFFDF9" stroke-width="3" stroke-dasharray="16,16" stroke-linecap="round">
+    <line x1="460" y1="460" x2="960" y2="210"/>
+  </g>
+
+  <!-- Zebra Cross Penyeberangan -->
+  <g fill="#FFFDF9" stroke="#2B1B12" stroke-width="1.5">
+    <polygon points="540,430 565,418 585,428 560,440"/>
+    <polygon points="565,442 590,430 610,440 585,452"/>
+    <polygon points="590,454 615,442 635,452 610,464"/>
+    <polygon points="615,466 640,454 660,464 635,476"/>
+  </g>
+
+
+  <!-- ================= 5. SISTEM COMMUTER LINE ELEVATED dan STASIUN ================= -->
+  <!-- Urutan layer diatur teliti agar Stasiun tidak tertutup rel -->
+  <g id="sistemRelKereta">
+    <!-- Tiang Pancang Beton Kiri -->
+    <polygon points="30,260 50,250 50,340 30,350" class="f-shadow"/>
+    <polygon points="50,250 65,257 65,347 50,340" class="f-cream"/>
+    <polygon points="120,305 140,295 140,385 120,395" class="f-shadow"/>
+    <polygon points="140,295 155,302 155,392 140,385" class="f-cream"/>
+    <polygon points="210,350 230,340 230,430 210,440" class="f-shadow"/>
+    <polygon points="230,340 245,347 245,437 230,430" class="f-cream"/>
+
+    <!-- Balok Rel Segmen Kiri Menuju Stasiun -->
+    <polygon points="0,220 250,345 250,375 0,250" class="f-cream"/>
+    <polygon points="0,205 35,188 285,313 250,330" class="f-white"/>
+    <polygon points="250,345 285,328 285,358 250,375" class="f-shadow"/>
+
+    <!-- Kereta Listrik Komuter (KRL Senja Express) -->
+    <g transform="translate(90, 220)">
+      <polygon points="0,30 90,75 90,20 0,-25" class="f-white"/>
+      <polygon points="90,75 135,52 135,-3 90,20" class="f-cream"/>
+      <polygon points="0,-25 45,-48 135,-3 90,20" class="f-roof"/>
+      <!-- Livery Garis Terakota Senja -->
+      <polygon points="0,18 90,63 90,51 0,6" class="f-terra"/>
+      <polygon points="90,63 135,40 135,28 90,51" class="f-terra"/>
+      <!-- Jendela KRL Gelap -->
+      <polygon points="12,8 36,20 36,5 12,-7" class="f-dark"/>
+      <polygon points="48,26 72,38 72,23 48,11" class="f-dark"/>
+      <polygon points="100,32 124,20 124,5 100,17" class="f-dark"/>
+      <!-- Pantograf Atap Listrik Aliran Atas -->
+      <line x1="55" y1="-30" x2="65" y2="-45" stroke="#2B1B12" stroke-width="2"/>
+      <line x1="75" y1="-30" x2="65" y2="-45" stroke="#2B1B12" stroke-width="2"/>
+      <line x1="50" y1="-45" x2="80" y2="-45" stroke="#2B1B12" stroke-width="2"/>
+    </g>
+
+    <!-- Tiang Pancang Beton Kanan (Di Bawah Rel Lanjutan) -->
+    <polygon points="450,470 470,460 470,570 450,580" class="f-shadow"/>
+    <polygon points="470,460 485,467 485,577 470,570" class="f-cream"/>
+    <polygon points="560,525 580,515 580,635 560,645" class="f-shadow"/>
+    <polygon points="580,515 595,522 595,642 580,635" class="f-cream"/>
+
+    <!-- Balok Rel Segmen Kanan Keluar Dari Stasiun -->
+    <polygon points="360,400 730,585 730,615 360,430" class="f-cream"/>
+    <polygon points="360,370 395,352 765,538 730,555" class="f-white"/>
+    <polygon points="730,585 765,568 765,598 730,615" class="f-shadow"/>
+
+    <!-- Rel Dobel dan Bantalan Kereta Kanan -->
+    <g stroke="#2B1B12" stroke-width="2.2">
+      <line x1="390" y1="385" x2="410" y2="375"/>
+      <line x1="430" y1="405" x2="450" y2="395"/>
+      <line x1="470" y1="425" x2="490" y2="415"/>
+      <line x1="510" y1="445" x2="530" y2="435"/>
+      <line x1="550" y1="465" x2="570" y2="455"/>
+      <line x1="590" y1="485" x2="610" y2="475"/>
+      <line x1="630" y1="505" x2="650" y2="495"/>
+      <line x1="670" y1="525" x2="690" y2="515"/>
+      <line x1="710" y1="545" x2="730" y2="535"/>
+      <line x1="375" y1="375" x2="715" y2="545" stroke-width="2.6"/>
+      <line x1="395" y1="365" x2="735" y2="535" stroke-width="2.6"/>
+    </g>
+
+    <!-- BANGUNAN STASIUN SENJA (Ditaruh DI ATAS Rel Agar Bebas Tabrakan) -->
+    <g transform="translate(240, 315)">
+      <!-- Dinding Depan dan Samping Stasiun -->
+      <polygon points="0,30 90,75 90,175 0,130" class="f-white"/>
+      <polygon points="90,75 160,40 160,140 90,175" class="f-cream"/>
+      <!-- Atap Pelana Stasiun -->
+      <polygon points="0,30 70,-5 160,40 90,75" class="f-roof"/>
+      <!-- Kanopi List Plang Terakota Depan -->
+      <polygon points="-8,26 82,71 82,82 -8,37" class="f-terra"/>
+
+      <!-- Portal Terowongan Kereta -->
+      <polygon points="90,75 150,45 150,115 90,145" class="f-dark"/>
+      <line x1="95" y1="140" x2="145" y2="115" stroke="#D9C3A8" stroke-width="3"/>
+
+      <!-- Pintu Kaca dan Jendela Loket Stasiun -->
+      <polygon points="15,85 45,100 45,130 15,115" class="glass-warm"/>
+      <line x1="30" y1="92" x2="30" y2="122" stroke="#2B1B12" stroke-width="1.5"/>
+
+      <!-- PAPAN NAMA RESMI STASIUN SENJA (PRESISI DI DINDING DEPAN, BEBAS POTONGAN) -->
+      <g transform="translate(10, 42)">
+        <rect x="0" y="0" width="86" height="20" rx="3" class="f-white" stroke="#2B1B12" stroke-width="1.8"/>
+        <text x="43" y="14" font-family="Georgia, serif" font-size="9" font-weight="bold" fill="#2B1B12" text-anchor="middle" letter-spacing="1">
+          STASIUN SENJA
+        </text>
+      </g>
+    </g>
+  </g>
+
+
+  <!-- ================= 6. DERETAN BANGUNAN RUANG KAWAN dan KAFE ================= -->
+
+  <!-- BANGUNAN 1: RUANG KAWAN (STUDIO dan PERPUSTAKAAN KOMUNITAS) -->
+  <g class="gedung" transform="translate(425, 160)">
+    <polygon points="0,30 70,65 70,145 0,110" class="f-white"/>
+    <polygon points="70,65 130,35 130,115 70,145" class="f-cream"/>
+    <polygon points="0,30 60,0 130,35 70,65" class="f-roof"/>
+    <polygon points="-5,65 65,100 65,108 -5,73" class="f-terra"/>
+    
+    <!-- Jendela Kaca Perpustakaan -->
+    <polygon points="15,45 55,65 55,90 15,70" class="glass-light"/>
+    <line x1="35" y1="55" x2="35" y2="80" stroke="#2B1B12" stroke-width="1.5"/>
+    <polygon points="15,95 45,110 45,138 15,123" class="glass-warm"/>
+    
+    <!-- BILLBOARD ATAP RUANG KAWAN (HORIZONTAL LEGA, 2 TIANG) -->
+    <g transform="translate(15, -16)">
+      <line x1="18" y1="22" x2="18" y2="38" stroke="#2B1B12" stroke-width="2"/>
+      <line x1="82" y1="22" x2="82" y2="38" stroke="#2B1B12" stroke-width="2"/>
+      <rect x="0" y="0" width="100" height="24" rx="4" class="f-white" stroke="#2B1B12" stroke-width="1.8"/>
+      <text x="50" y="16" font-family="'Comic Sans MS', cursive, sans-serif" font-size="10" font-weight="bold" fill="#2B1B12" text-anchor="middle" letter-spacing="0.8">
+        RUANG KAWAN
+      </text>
+    </g>
+  </g>
+
+
+  <!-- BANGUNAN 2: KEDAI KOPI SENJA (KEDAI UTAMA 2 LANTAI - PUSAT PERHATIAN) -->
+  <g class="gedung" transform="translate(585, 205)">
+    <!-- Dinding Utama -->
+    <polygon points="0,30 110,85 110,190 0,135" class="f-white"/>
+    <polygon points="110,85 190,45 190,150 110,190" class="f-cream"/>
+    <polygon points="0,30 80,-10 190,45 110,85" class="f-roof"/>
+
+    <!-- Kanopi Garis-Garis Khas Kedai Senja -->
+    <polygon points="-8,88 108,146 108,160 -8,102" class="f-terra"/>
+    <polygon points="108,146 138,131 138,145 108,160" class="f-terra"/>
+    <polygon points="15,100 35,110 35,124 15,114" fill="#FFFDF9"/>
+    <polygon points="55,120 75,130 75,144 55,134" fill="#FFFDF9"/>
+
+    <!-- Jendela Lantai 2 (Cahaya Hangat Sore Hari) -->
+    <polygon points="20,45 50,60 50,85 20,70" class="glass-warm"/>
+    <polygon points="65,68 95,83 95,108 65,93" class="glass-warm"/>
+
+    <!-- Pintu Masuk Kaca dan Gagang Pintu Kayu -->
+    <polygon points="15,118 55,138 55,174 15,154" class="glass-warm"/>
+    <line x1="35" y1="128" x2="35" y2="164" stroke="#2B1B12" stroke-width="1.5"/>
+    <polygon points="65,143 95,158 95,188 65,173" class="f-white"/>
+    <circle cx="72" cy="168" r="2.2" fill="#A34A22"/>
+
+    <!-- BILLBOARD ROOFTOP RESMI KOPI SENJA (DENGAN LOGO CANGKIR KOPI ELEGAN dan RAPI) -->
+    <g transform="translate(18, -32)">
+      <!-- Dua Tiang Penyangga Billboard -->
+      <line x1="25" y1="26" x2="25" y2="44" stroke="#2B1B12" stroke-width="2.5"/>
+      <line x1="125" y1="26" x2="125" y2="44" stroke="#2B1B12" stroke-width="2.5"/>
+      
+      <!-- Papan Putih Bersih dengan Lis Hitam Tebal -->
+      <rect x="0" y="-4" width="150" height="30" rx="4" class="f-white" stroke="#2B1B12" stroke-width="2"/>
+      
+      <!-- LOGO CANGKIR KOPI SENJA (DESAIN VEKTOR MINIMALIS PRESISI dan RAPI) -->
+      <g transform="translate(14, 4)">
+        <!-- Piring Tatakan Cangkir -->
+        <ellipse cx="10" cy="14" rx="8" ry="2" fill="#A34A22"/>
+        <!-- Badan Cangkir Bulat -->
+        <path d="M 4 2 L 6 12 C 6 14, 14 14, 14 12 L 16 2 Z" fill="#A34A22"/>
+        <!-- Pegangan Cangkir (Handle) -->
+        <path d="M 15 4 C 18 4, 18 9, 15 10" fill="none" stroke="#A34A22" stroke-width="1.8" stroke-linecap="round"/>
+        <!-- Uap Hangat Aroma Kopi Berkelok Halus -->
+        <path d="M 8 -2 Q 7 -5 9 -8" fill="none" stroke="#8B5A3C" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M 12 -2 Q 13 -5 11 -8" fill="none" stroke="#8B5A3C" stroke-width="1.2" stroke-linecap="round"/>
+      </g>
+
+      <!-- Teks Tipografi "KOPI SENJA" Berwibawa dan Seimbang -->
+      <text x="88" y="16" font-family="Georgia, serif" font-size="12.5" font-weight="900" fill="#2B1B12" text-anchor="middle" letter-spacing="1.8">
+        KOPI SENJA
+      </text>
+    </g>
+
+    <!-- Meja Teras Kayu dan Kursi Santai -->
+    <g transform="translate(15, 165)">
+      <polygon points="15,10 38,22 38,26 15,14" class="f-roof"/>
+      <line x1="26" y1="16" x2="26" y2="32" stroke="#2B1B12" stroke-width="2"/>
+      <circle cx="27" cy="15" r="2.5" fill="#A34A22"/>
+      <ellipse cx="10" cy="24" rx="4" ry="2" class="f-shadow"/>
+      <line x1="10" y1="24" x2="10" y2="32" stroke="#2B1B12" stroke-width="1.5"/>
+      <ellipse cx="44" cy="28" rx="4" ry="2" class="f-shadow"/>
+      <line x1="44" y1="28" x2="44" y2="36" stroke="#2B1B12" stroke-width="1.5"/>
+    </g>
+
+    <!-- Motor Kawan Ojol Parkir Tertib -->
+    <g transform="translate(120, 180)">
+      <ellipse cx="8" cy="10" rx="4" ry="7" class="f-dark"/>
+      <ellipse cx="26" cy="19" rx="4" ry="7" class="f-dark"/>
+      <polygon points="6,4 24,13 20,0 10,-5" fill="#2E7D47" stroke="#2B1B12" stroke-width="1.5"/>
+      <circle cx="14" cy="-8" r="4.5" fill="#2E7D47" stroke="#2B1B12" stroke-width="1.5"/>
+    </g>
+  </g>
+
+
+  <!-- BANGUNAN 3: DAPUR ROASTERY dan TOAST (PRODUKSI BIJI KOPI SEGAR) -->
+  <g class="gedung" transform="translate(790, 295)">
+    <polygon points="0,25 90,70 90,140 0,95" class="f-white"/>
+    <polygon points="90,70 150,40 150,110 90,140" class="f-cream"/>
+    <polygon points="0,25 45,2 90,25 90,70" class="f-roof"/>
+    <polygon points="90,25 150,-5 150,40 90,70" class="f-roof"/>
+
+    <!-- Cerobong Asap Mesin Sangrai Roaster -->
+    <polygon points="25,0 35,5 35,-22 25,-27" class="f-terra"/>
+    <path d="M30 -30 Q22 -42 32 -50 Q42 -58 35 -68" stroke="#8B5A3C" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.75"/>
+
+    <!-- Pintu Gulung Gudang dan Karung Goni Kopi -->
+    <polygon points="25,50 65,70 65,115 25,95" class="f-cream"/>
+    <line x1="25" y1="50" x2="65" y2="70" stroke="#A34A22" stroke-width="2"/>
+    <ellipse cx="15" cy="95" rx="6" ry="8" fill="#C9A887" stroke="#2B1B12" stroke-width="1.8"/>
+    <ellipse cx="24" cy="99" rx="6" ry="8" fill="#B59372" stroke="#2B1B12" stroke-width="1.8"/>
+
+    <!-- BILLBOARD ROASTERY (HORIZONTAL DENGAN 2 TIANG) -->
+    <g transform="translate(55, 2)">
+      <line x1="16" y1="18" x2="16" y2="32" stroke="#2B1B12" stroke-width="2"/>
+      <line x1="78" y1="18" x2="78" y2="32" stroke="#2B1B12" stroke-width="2"/>
+      <rect x="5" y="-2" width="86" height="22" rx="3" class="f-white" stroke="#2B1B12" stroke-width="1.8"/>
+      <text x="48" y="13" font-family="'Comic Sans MS', cursive, sans-serif" font-size="9" font-weight="bold" fill="#2B1B12" text-anchor="middle" letter-spacing="1">
+        ROASTERY
+      </text>
+    </g>
+  </g>
+
+
+  <!-- BANGUNAN 4: HALTE BUS dan TITIK KUMPUL KAWAN -->
+  <g class="gedung" transform="translate(970, 385)">
+    <polygon points="0,20 60,50 60,100 0,70" class="f-white"/>
+    <polygon points="60,50 100,30 100,80 60,100" class="f-cream"/>
+    <polygon points="0,20 40,0 100,30 60,50" class="f-terra"/>
+    <!-- Tiang Plang Halte Suroboyo Bus -->
+    <line x1="115" y1="70" x2="115" y2="35" stroke="#2B1B12" stroke-width="2"/>
+    <circle cx="115" cy="32" r="7" fill="#A34A22" stroke="#2B1B12" stroke-width="1.8"/>
+    <text x="115" y="35" font-family="sans-serif" font-size="8" font-weight="bold" fill="#FFFDF9" text-anchor="middle">S</text>
+    <circle cx="25" cy="52" r="4" fill="#E8B49E" stroke="#2B1B12" stroke-width="1.5"/>
+    <rect x="22" y="57" width="8" height="14" rx="2" fill="#E2A638" stroke="#2B1B12" stroke-width="1.5"/>
+  </g>
+
+
+  <!-- ================= 7. KENDARAAN KOTA SURABAYA DI JALUR JALAN ================= -->
+  <!-- Angkot Kuning Surabaya (Lyn) Melaju di Jalur Jalan Tengah -->
+  <g transform="translate(685, 335)">
+    <polygon points="0,20 40,40 80,20 40,0" fill="#FFC83B" stroke="#2B1B12" stroke-width="2"/>
+    <polygon points="0,20 40,40 40,54 0,34" fill="#FFC83B" stroke="#2B1B12" stroke-width="2"/>
+    <polygon points="40,40 80,20 80,34 40,54" fill="#FFC83B" stroke="#2B1B12" stroke-width="2"/>
+    <polygon points="10,18 34,30 34,22 10,10" class="f-dark"/>
+    <polygon points="46,31 72,18 72,10 46,23" class="f-dark"/>
+    <circle cx="15" cy="38" r="5" class="f-dark"/>
+    <circle cx="60" cy="38" r="5" class="f-dark"/>
+  </g>
+
+  <!-- Mobil Sedan Merah Terakota -->
+  <g transform="translate(830, 255)">
+    <polygon points="0,16 32,32 64,16 32,0" class="f-terra"/>
+    <polygon points="0,16 32,32 32,42 0,26" class="f-terra"/>
+    <polygon points="32,32 64,16 64,26 32,42" class="f-terra"/>
+    <polygon points="12,13 30,22 30,16 12,7" class="f-dark"/>
+    <circle cx="12" cy="30" r="4" class="f-dark"/>
+    <circle cx="48" cy="30" r="4" class="f-dark"/>
+  </g>
+
+  <!-- Gerobak Rombong Jajanan Tradisional di Tepi Trotoar -->
+  <g transform="translate(500, 500)">
+    <polygon points="0,10 26,23 26,38 0,25" class="f-white"/>
+    <polygon points="26,23 38,17 38,32 26,38" class="f-cream"/>
+    <polygon points="0,10 12,4 38,17 26,23" class="f-terra"/>
+    <circle cx="13" cy="38" r="6" class="f-white" stroke="#2B1B12" stroke-width="2"/>
+  </g>
+
+
+  <!-- ================= 8. PEPOHONAN ASRI HIJAU DI AREA TERBUKA ================= -->
+  <!-- Pohon Belakang Ruang Kawan -->
+  <g transform="translate(540, 195)">
+    <polygon points="8,20 12,20 12,42 8,42" class="f-shadow"/>
+    <circle cx="10" cy="15" r="16" class="tree-crown"/>
+    <circle cx="16" cy="10" r="12" class="tree-dark"/>
+  </g>
+  <!-- Pohon Depan Stasiun -->
+  <g transform="translate(195, 275)">
+    <polygon points="8,20 12,20 12,42 8,42" class="f-shadow"/>
+    <circle cx="10" cy="15" r="18" class="tree-crown"/>
+    <circle cx="6" cy="8" r="14" class="tree-dark"/>
+  </g>
+  <!-- Pohon Antara Kedai dan Roastery -->
+  <g transform="translate(745, 275)">
+    <polygon points="8,20 12,20 12,40 8,40" class="f-shadow"/>
+    <circle cx="10" cy="15" r="15" class="tree-crown"/>
+  </g>
+  <!-- Pohon Tepi Danau Kanan -->
+  <g transform="translate(1090, 495)">
+    <polygon points="8,20 12,20 12,45 8,45" class="f-shadow"/>
+    <circle cx="10" cy="15" r="20" class="tree-crown"/>
+    <circle cx="16" cy="8" r="15" class="tree-dark"/>
+  </g>
+
+
+  <!-- ================= 9. CALLOUT POINTER KHAS KOPI SENJA (RINGAN, ELEGAN dan BEBAS TABRAKAN) ================= -->
+  <!-- CATATAN: Semua garis penunjuk berbelok lembut menuju atap / lantai terbuka, TANPA MENABRAK PAPAN / TEKS APAPUN -->
+
+  <!-- CALLOUT 1: KEDAI KOPI SENJA -->
+  <!-- Berada di area terbuka di atas Kedai Senja (x=570, y=90) -->
+  <g transform="translate(560, 95)" filter="url(#softShadow)">
+    <!-- Garis lengkung menunjuk ke atap teras kafe -->
+    <path d="M 65 24 Q 50 65 40 100" class="callout-arrow"/>
+    <circle cx="40" cy="100" r="3.5" class="callout-dot"/>
+    <!-- Kotak Tag Rapi -->
+    <rect x="0" y="0" width="138" height="24" class="callout-tag"/>
+    <text x="69" y="16" text-anchor="middle" class="callout-txt">KEDAI KOPI SENJA</text>
+  </g>
+
+  <!-- CALLOUT 2: RUANG KAWAN -->
+  <!-- Berada di atas kiri Ruang Kawan (x=300, y=95) -->
+  <g transform="translate(300, 95)" filter="url(#softShadow)">
+    <!-- Garis lengkung menunjuk ke sudut atap samping (x=435, y=165), BUKAN menabrak papan! -->
+    <path d="M 125 12 Q 155 20 160 55" class="callout-arrow"/>
+    <circle cx="160" cy="55" r="3.5" class="callout-dot"/>
+    <rect x="0" y="0" width="124" height="24" class="callout-tag"/>
+    <text x="62" y="16" text-anchor="middle" class="callout-txt">RUANG KAWAN</text>
+  </g>
+
+  <!-- CALLOUT 3: DAPUR ROASTERY -->
+  <!-- Berada di kanan atas Roastery (x=890, y=220) -->
+  <g transform="translate(890, 220)" filter="url(#softShadow)">
+    <!-- Garis lengkung ke atap roastery (x=835, y=285) -->
+    <path d="M -5 14 Q -35 25 -45 65" class="callout-arrow"/>
+    <circle cx="-45" cy="65" r="3.5" class="callout-dot"/>
+    <rect x="0" y="0" width="136" height="24" class="callout-tag"/>
+    <text x="68" y="16" text-anchor="middle" class="callout-txt">DAPUR ROASTERY</text>
+  </g>
+
+  <!-- CALLOUT 4: STASIUN SENJA -->
+  <!-- Berada di kiri bawah stasiun (x=100, y=430) -->
+  <g transform="translate(100, 430)" filter="url(#softShadow)">
+    <!-- Garis lengkung ke lantai depan pintu stasiun (x=240, y=410) -->
+    <path d="M 125 12 Q 160 10 185 -10" class="callout-arrow"/>
+    <circle cx="185" cy="-10" r="3.5" class="callout-dot"/>
+    <rect x="0" y="0" width="124" height="24" class="callout-tag"/>
+    <text x="62" y="16" text-anchor="middle" class="callout-txt">STASIUN SENJA</text>
+  </g>
+
+</svg>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hubungi Kedai Kopi Senja Surabaya — Alamat lengkap di Jl. Dharmawangsa No. 24 Gubeng Surabaya, nomor kontak WhatsApp, email, dan formulir sapa barista kami.">
+
+    <title>Kopi Senja — Lokasi &amp; Kontak</title>
+
+    <!-- Favicon Kopi Senja -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- Google Fonts: Permanent Marker (Judul) & Courier Prime (Mesin Tik) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CDN (Slide 6 Rubrik UTS) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- CSS Eksternal Terpadu (Sesuai Struktur UTS: css/style.css) -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Skip-Link untuk Aksesibilitas Keyboard (Slide 4 Rubrik UTS) -->
+    <a href="#main" class="skip-link">Lewati ke konten utama</a>
+
+    <!-- Header & Navigasi Editorial Kopi Senja -->
+    <header class="header-lebar">
+        <div class="header-brand">
+            <a href="index.html" class="brand-title">
+                ☕ Kopi Senja
+            </a>
+            <span class="brand-est">Ruang Singgah di Surabaya · Est. 2023</span>
+        </div>
+
+        <div class="nav-wrap">
+            <nav>
+                <a href="index.html">Beranda</a>
+                <a href="menu.html">Katalog Menu</a>
+                <a href="tentang.html">Tentang Kami</a>
+                <a href="kontak.html" aria-current="page">Lokasi &amp; Kontak</a>
+            </nav>
+            <div class="lang-switch" title="Pilihan Bahasa">
+                <strong class="lang-active">ID</strong> | <span class="lang-inactive">EN</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Konten Utama Halaman Kontak -->
+    <main class="halaman-tentang" id="main">
+        <h1>Lokasi &amp; Kontak Kopi Senja</h1>
+
+        <p class="lead">
+            Punya pertanyaan seputar seduhan kami, reservasi ruang diskusi, atau ingin menyapa barista? Pintu dan ruang kami selalu terbuka hangat untukmu.
+        </p>
+
+        <!-- Figure Semantik Lokasi Kedai -->
+        <figure class="kontak-hero-figure">
+            <img src="images/banner-bar-counter.jpg" alt="Suasana Meja Seduh dan Barista Kedai Kopi Senja Surabaya" class="banner-komik-senja">
+            <figcaption class="caption-senja">Meja Seduh Barista Kopi Senja Surabaya di Jl. Dharmawangsa No. 24, Gubeng — siap menyambut kehadiran Kawan Senja.</figcaption>
+        </figure>
+
+        <div class="kontak-grid-desktop">
+            <!-- Informasi Gerai -->
+            <section class="kartu">
+                <h2>Informasi Gerai Surabaya</h2>
+
+                <p><strong>Nama Gerai:</strong> Kedai Kopi Senja Surabaya</p>
+                <p><strong>Alamat:</strong> Jl. Dharmawangsa No. 24, Gubeng, Surabaya, Jawa Timur 60286</p>
+                <p><strong>Waktu Operasional:</strong><br>
+                   Senin – Jumat: 09.00 – 22.00 WIB<br>
+                   Sabtu – Minggu: 08.00 – 22.30 WIB
+                </p>
+                <p><strong>Email:</strong> <a href="mailto:halo@kopisenja.example">halo@kopisenja.example</a></p>
+                <p><strong>WhatsApp Kawan:</strong> +62 812-3456-7890</p>
+
+                <hr class="pemisah-tipis">
+
+                <h3>Fasilitas Ruang Singgah</h3>
+                <ul>
+                    <li>Koneksi Wi-Fi Berkecepatan Tinggi (Ramah Nugas)</li>
+                    <li>Stopkontak di Setiap Meja</li>
+                    <li>Sudut Baca Literasi &amp; Rak Buku Gratis</li>
+                    <li>Area Bebas Asap Rokok (Indoor AC) &amp; Teras Luar</li>
+                </ul>
+            </section>
+
+            <!-- Formulir Pemesanan & Reservasi (Syarat Wajib Slide 4 & 6 Rubrik UTS) -->
+            <section class="kartu">
+                <h2>Formulir Reservasi &amp; Sapa Barista</h2>
+                <p class="form-keterangan">Silakan isi formulir di bawah ini untuk pemesanan meja, reservasi kelompok belajar, atau sapaan hangat kepada barista kami.</p>
+
+                <form id="formKontak" action="terima-kasih.html" method="get">
+
+                    <!-- Fieldset 1: Data Diri Pelanggan -->
+                    <fieldset class="form-fieldset">
+                        <legend class="form-legend">1. Data Diri Kawan</legend>
+
+                        <div class="form-baris">
+                            <p class="form-grup">
+                                <label for="nama">Nama Lengkap <span class="teks-wajib">*</span></label>
+                                <input type="text" id="nama" name="nama" autocomplete="name" placeholder="Contoh: Budi Santoso" required minlength="3">
+                            </p>
+
+                            <p class="form-grup">
+                                <label for="email">Alamat Email <span class="teks-wajib">*</span></label>
+                                <input type="email" id="email" name="email" autocomplete="email" placeholder="nama@email.com" required>
+                            </p>
+                        </div>
+
+                        <p class="form-grup">
+                            <label for="telp">Nomor WhatsApp / HP <span class="teks-wajib">*</span></label>
+                            <input type="tel" id="telp" name="telp" autocomplete="tel" placeholder="081234567890" pattern="[0-9]{10,14}" title="Format: 10-14 digit angka" required>
+                            <small class="form-petunjuk">Digunakan untuk konfirmasi kehadiran via WhatsApp.</small>
+                        </p>
+                    </fieldset>
+
+                    <!-- Fieldset 2: Detail Rencana Singgah / Reservasi -->
+                    <fieldset class="form-fieldset">
+                        <legend class="form-legend">2. Rencana Waktu &amp; Meja</legend>
+
+                        <div class="form-baris">
+                            <p class="form-grup">
+                                <label for="tanggal">Tanggal Kunjungan <span class="teks-wajib">*</span></label>
+                                <input type="date" id="tanggal" name="tanggal" required>
+                            </p>
+
+                            <p class="form-grup">
+                                <label for="jumlah_tamu">Jumlah Orang (Pax) <span class="teks-wajib">*</span></label>
+                                <input type="number" id="jumlah_tamu" name="jumlah_tamu" min="1" max="25" value="2" required>
+                            </p>
+                        </div>
+
+                        <p class="form-grup">
+                            <label for="area_kedai">Pilihan Area Kedai <span class="teks-wajib">*</span></label>
+                            <select id="area_kedai" name="area_kedai" required>
+                                <option value="" disabled selected>-- Pilih Ruang Singgah --</option>
+                                <option value="Indoor AC (Ruang Baca Bebas Asap)">Ruang Dalam AC (Tenang &amp; Ramah Nugas)</option>
+                                <option value="Meja Seduh Barista">Meja Barista (Bincang Kopi Bersahaja)</option>
+                                <option value="Teras Terakota Luar">Teras Luar Terakota (Santai Sore)</option>
+                                <option value="Lantai 2 Kolaborasi">Lantai 2 (Diskusi Kelompok &amp; Komunitas)</option>
+                            </select>
+                        </p>
+
+                        <!-- Pilihan Waktu (Radio Button) -->
+                        <div class="form-grup">
+                            <span class="label-pilihan">Preferensi Waktu Singgah:</span>
+                            <div class="radio-group-senja">
+                                <label class="radio-chip">
+                                    <input type="radio" name="waktu_singgah" value="Pagi-Siang (09.00 - 14.00)" checked>
+                                    <span>Pagi – Siang (09.00 - 14.00)</span>
+                                </label>
+                                <label class="radio-chip">
+                                    <input type="radio" name="waktu_singgah" value="Waktu Senja (15.00 - 18.30)">
+                                    <span>Waktu Senja (15.00 - 18.30)</span>
+                                </label>
+                                <label class="radio-chip">
+                                    <input type="radio" name="waktu_singgah" value="Malam Santai (19.00 - 22.00)">
+                                    <span>Malam Santai (19.00 - 22.00)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Fasilitas Tambahan (Checkbox) -->
+                        <div class="form-grup">
+                            <span class="label-pilihan">Kebutuhan Tambahan:</span>
+                            <div class="checkbox-group-senja">
+                                <label class="checkbox-chip">
+                                    <input type="checkbox" name="fasilitas" value="Dekat Stopkontak Laptop">
+                                    <span>Butuh Meja Dekat Stopkontak</span>
+                                </label>
+                                <label class="checkbox-chip">
+                                    <input type="checkbox" name="fasilitas" value="Siapkan Roti Toast Terlebih Dahulu">
+                                    <span>Siapkan Toast Hangat Terlebih Dahulu</span>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Fieldset 3: Catatan Khusus -->
+                    <fieldset class="form-fieldset">
+                        <legend class="form-legend">3. Catatan &amp; Salam Kawan</legend>
+
+                        <p class="form-grup">
+                            <label for="pesan">Pesan Khusus atau Cerita untuk Barista</label>
+                            <textarea id="pesan" name="pesan" rows="4" placeholder="Tuliskan catatan khusus atau sapaan hangatmu untuk Kopi Senja..."></textarea>
+                        </p>
+                    </fieldset>
+
+                    <div class="form-aksi">
+                        <button type="submit" class="tombol">
+                            Kirim Formulir Reservasi →
+                        </button>
+                        <button type="reset" class="tombol-outline">
+                            Bersihkan Form
+                        </button>
+                    </div>
+
+                    <!-- Tempat Notifikasi Feedback Pengiriman -->
+                    <div id="formFeedback" class="form-feedback-box"></div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Lengkap & Proporsional -->
+    <footer class="footer-lebar">
+        <div class="footer-container">
+            <!-- Kolom 1: Merek & Profil -->
+            <div class="footer-col">
+                <h4>☕ Kopi Senja Surabaya</h4>
+                <p>
+                    Lahir dari kehangatan seduhan, bertumbuh bersama Kawan Senja. Ruang singgah sederhana untuk berbagi cerita di ujung hari.
+                </p>
+                <div class="footer-badge-kota">
+                    📍 Surabaya, Jawa Timur · Indonesia
+                </div>
+            </div>
+
+            <!-- Kolom 2: Tautan Halaman -->
+            <div class="footer-col">
+                <h4>Tautan Halaman</h4>
+                <ul>
+                    <li><a href="index.html">Beranda Utama</a></li>
+                    <li><a href="menu.html">Katalog Menu &amp; Kasir</a></li>
+                    <li><a href="tentang.html">Tentang &amp; Semesta Senja</a></li>
+                    <li><a href="kontak.html">Lokasi &amp; Kontak</a></li>
+                    <li><a href="demo-css.html">Demo Metode CSS</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Waktu Operasional -->
+            <div class="footer-col">
+                <h4>Waktu Operasional</h4>
+                <div class="jadwal-box">
+                    <div class="jadwal-item">
+                        <span class="jadwal-hari">Senin – Jumat</span>
+                        <span class="jadwal-jam">09.00 – 22.00 WIB</span>
+                    </div>
+                    <div class="jadwal-item">
+                        <span class="jadwal-hari">Sabtu – Minggu</span>
+                        <span class="jadwal-jam">08.00 – 22.30 WIB</span>
+                    </div>
+                </div>
+                <p class="footer-layanan-info">
+                    Menerima pesanan mandiri di tempat (Dine-in) dan bawa pulang (Take-away).
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 Kopi Senja Surabaya. Semua hak dilindungi.</span>
+            <span class="footer-bottom-senja">Dirancang dengan cinta untuk Kawan Senja.</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 Bundle JS CDN (Slide 6 Rubrik UTS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- JavaScript Terpadu -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

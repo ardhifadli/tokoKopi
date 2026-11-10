@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview Interaktif 3 Opsi Warna — Kopi Senja</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Default: Opsi 1 */
+            --bg: #FAF7F2;
+            --ink: #1E1B18;
+            --latte: #7A685A;
+            --terra: #B8623A;
+            --card: #FFFFFF;
+            --card-surface: #FFFFFF;
+            --input-border: #D8C7B8;
+            --font-heading: 'Permanent Marker', cursive, Georgia, serif;
+            --font-body: 'Courier Prime', monospace;
+        }
+
+        body.theme-opsi1 {
+            --bg: #FAF7F2;
+            --ink: #1E1B18;
+            --latte: #7A685A;
+            --terra: #B8623A;
+            --card: #FFFFFF;
+            --card-surface: #FFFFFF;
+            --input-border: #D8C7B8;
+        }
+
+        body.theme-opsi2 {
+            --bg: #F4EFE6;
+            --ink: #221C18;
+            --latte: #7D6452;
+            --terra: #C45A1A;
+            --card: #FFFDF9;
+            --card-surface: #FFFFFF;
+            --input-border: #D2BEAB;
+        }
+
+        body.theme-opsi3 {
+            --bg: #EFEAE2;
+            --ink: #17100B;
+            --latte: #735742;
+            --terra: #D07A2E;
+            --card: #F9F6F0;
+            --card-surface: #FFFFFF;
+            --input-border: #C9B6A1;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--ink);
+            transition: background 0.3s ease, color 0.3s ease;
+            line-height: 1.6;
+        }
+
+        /* Top Switcher Bar */
+        .switcher-bar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #14100D;
+            color: #FFFDF9;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+        }
+
+        .switcher-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: #E8D2C0;
+        }
+
+        .switcher-buttons {
+            display: flex;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-theme {
+            padding: 0.65rem 1.25rem;
+            border-radius: 9999px;
+            border: 2px solid #5A4335;
+            background: #251B14;
+            color: #E8D2C0;
+            cursor: pointer;
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: 0.88rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-theme:hover {
+            border-color: #E8D2C0;
+            color: #FFFFFF;
+        }
+
+        .btn-theme.active {
+            background: #B8623A;
+            border-color: #FFFDF9;
+            color: #FFFFFF;
+            box-shadow: 0 2px 10px rgba(184, 98, 58, 0.4);
+        }
+
+        /* Preview Container */
+        .preview-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem 4rem;
+        }
+
+        .preview-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            color: var(--ink);
+            margin: 0.5rem 0;
+            line-height: 1.25;
+        }
+
+        .lead {
+            font-size: 1.05rem;
+            color: var(--latte);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .hero-aksi {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .tombol {
+            display: inline-block;
+            background: var(--terra);
+            color: #FFFFFF;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .tombol:hover {
+            opacity: 0.9;
+        }
+
+        .tombol-outline {
+            display: inline-block;
+            background: transparent;
+            color: var(--ink);
+            border: 1.5px solid var(--latte);
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        /* Form Card */
+        .preview-card {
+            background: var(--card);
+            border: 1.5px solid var(--input-border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+        }
+
+        .form-legend {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            color: var(--terra);
+            padding: 0.25rem 0.85rem;
+            background: var(--bg);
+            border: 1.5px solid var(--terra);
+            border-radius: 6px;
+            display: inline-block;
+            margin-bottom: 1.25rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        @media (max-width: 600px) {
+            .form-row { grid-template-columns: 1fr; }
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-weight: 700;
+            font-size: 0.92rem;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            font-family: inherit;
+            font-size: 0.95rem;
+            color: var(--ink);
+            background: var(--card-surface);
+            border: 1.5px solid var(--input-border);
+            border-radius: 8px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        input:focus, select:focus {
+            border-color: var(--terra);
+            box-shadow: 0 0 0 3px rgba(184, 98, 58, 0.15);
+        }
+
+        /* Product Grid */
+        .grid-sample {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 650px) {
+            .grid-sample { grid-template-columns: 1fr; }
+        }
+
+        .prod-card {
+            background: var(--card);
+            border: 1.5px solid var(--input-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .prod-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            margin: 0 0 0.5rem;
+            color: var(--ink);
+        }
+
+        .prod-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--terra);
+        }
+
+        .info-box {
+            background: var(--bg);
+            border-left: 4px solid var(--terra);
+            padding: 1rem 1.25rem;
+            border-radius: 6px;
+            margin-top: 2rem;
+            font-size: 0.92rem;
+            color: var(--latte);
+        }
+    </style>
+</head>
+<body class="theme-opsi1">
+
+    <div class="switcher-bar">
+        <div class="switcher-title">☕ Pilihan Warna Kopi Senja</div>
+        <div class="switcher-buttons">
+            <button class="btn-theme active" onclick="setTheme('opsi1', this)">Opsi 1: Warm Modern</button>
+            <button class="btn-theme" onclick="setTheme('opsi2', this)">Opsi 2: Autentik Nusantara</button>
+            <button class="btn-theme" onclick="setTheme('opsi3', this)">Opsi 3: Deep Amber</button>
+        </div>
+    </div>
+
+    <div class="preview-container">
+
+        <div class="preview-header">
+            <h1>Lahir dari kehangatan seduhan,<br>bertumbuh bersama Kawan Senja.</h1>
+            <p class="lead">Ruang singgah sederhana di sudut kota Surabaya untuk melepas penat, menikmati secangkir cerita, dan pulang dengan hati yang hangat.</p>
+            <div class="hero-aksi">
+                <a href="#" class="tombol">Lihat Menu &amp; Pesan →</a>
+                <a href="#" class="tombol-outline">Cerita Kedai</a>
+            </div>
+        </div>
+
+        <!-- Form Card Sample -->
+        <div class="preview-card">
+            <span class="form-legend">1. DATA DIRI KAWAN</span>
+
+            <div class="form-row">
+                <div>
+                    <label>Nama Lengkap *</label>
+                    <input type="text" value="Budi Santoso">
+                </div>
+                <div>
+                    <label>Alamat Email *</label>
+                    <input type="email" value="budi.senja@gmail.com">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div>
+                    <label>Tanggal Kunjungan *</label>
+                    <input type="date" value="2026-11-15">
+                </div>
+                <div>
+                    <label>Pilihan Area Kedai *</label>
+                    <select>
+                        <option>Ruang Dalam AC (Tenang &amp; Ramah Nugas)</option>
+                        <option>Meja Barista</option>
+                        <option>Teras Terakota Luar</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="button" class="tombol" style="width: 100%; margin-top: 0.5rem; text-align: center;">
+                Kirim Formulir Reservasi →
+            </button>
+        </div>
+
+        <!-- Product Cards Sample -->
+        <div class="grid-sample">
+            <div class="prod-card">
+                <div>
+                    <h3 class="prod-title">Kopi Susu Senja Aren</h3>
+                    <p style="color: var(--latte); font-size: 0.9rem; margin-top: 0;">Racikan espresso house blend dengan gula aren murni nusantara dan susu gurih creamy.</p>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                    <span class="prod-price">Rp 20.000</span>
+                    <button class="tombol" style="padding: 0.5rem 1.25rem;">+ Pesan</button>
+                </div>
+            </div>
+
+            <div class="prod-card">
+                <div>
+                    <h3 class="prod-title">Senja Cloud Pandan</h3>
+                    <p style="color: var(--latte); font-size: 0.9rem; margin-top: 0;">Sentuhan aroma pandan alami berbalut cold foam susu dingin yang lembut menyegarkan.</p>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                    <span class="prod-price">Rp 24.000</span>
+                    <button class="tombol" style="padding: 0.5rem 1.25rem;">+ Pesan</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            💡 <strong>Panduan Pemilihan:</strong> Klik salah satu tombol di bar atas (Opsi 1, Opsi 2, atau Opsi 3) untuk melihat bagaimana warna teks, tombol, kartu, input form, dan latar belakang berubah secara langsung.
+        </div>
+
+    </div>
+
+    <script>
+        function setTheme(themeName, btn) {
+            document.body.className = 'theme-' + themeName;
+            document.querySelectorAll('.btn-theme').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+    </script>
+</body>
+</html>
+

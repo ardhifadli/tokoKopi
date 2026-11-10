@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice"><defs></defs><defs><radialGradient id="glow"><stop offset="0" stop-color="#FFD27A" stop-opacity=".85"/><stop offset="1" stop-color="#FFD27A" stop-opacity="0"/></radialGradient></defs>
+<circle cx="520" cy="120" r="150" fill="url(#glow)"/><circle cx="940" cy="110" r="130" fill="url(#glow)"/>
+<line x1="520" y1="0" x2="520" y2="42" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M460 130 Q460 55 520 42 Q580 55 580 130Z" fill="#E9C27A" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M468 100 L572 100 M474 78 L566 78 M482 58 L558 58" stroke="#B98A4A" stroke-width="2" fill="none"/>
+<path d="M482 130 L558 130 L548 150 L492 150Z" fill="#FFE9B0" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="940" y1="0" x2="940" y2="58" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="926" y="58" width="28" height="18" rx="3" fill="#7D6452" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M940 76 Q898 78 900 118 Q842 150 940 156 Q978 150 980 118 Q982 78 940 76Z" fill="#FFF3CF" fill-opacity=".8" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M926 120 Q940 100 954 120" stroke="#D47720" stroke-width="3" fill="none"/>
+<line x1="620" y1="22" x2="1000" y2="22" stroke="#221C18" stroke-width="8" stroke-linecap="round"/></svg>

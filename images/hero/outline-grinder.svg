@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 180" fill="none" class="svg-outline" aria-hidden="true">
+    <!-- Outline Line-Art Coffee Grinder (Biji Kopi Nusantara) -->
+    <!-- Tutup & Hopper Biji Kopi -->
+    <path class="outline-path" d="M 30 15 Q 60 8 90 15 L 85 24 Q 60 20 35 24 Z" stroke="#FFFDF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path class="outline-path" d="M 35 24 L 40 85 Q 60 92 80 85 L 85 24" stroke="#FFFDF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Cincin Pengatur Gilingan -->
+    <rect class="outline-path" x="38" y="85" width="44" height="12" rx="3" stroke="#FFFDF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Bodi Motor Mesin -->
+    <path class="outline-path" d="M 40 97 L 35 160 Q 60 166 85 160 L 80 97" stroke="#FFFDF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Corong & Penahan Portafilter -->
+    <path class="outline-path" d="M 52 110 L 46 132 L 74 132 L 68 110" stroke="#FFFDF9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Alas Mesin di Meja -->
+    <path class="outline-path" d="M 30 160 Q 60 168 90 160 L 92 168 Q 60 176 28 168 Z" stroke="#FFFDF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cerita dan filosofi Kopi Senja Surabaya — Ruang singgah hangat yang tumbuh dari sapaan kawan di Surabaya, 3 pilar nilai, dan peta ekosistem Semesta Senja.">
+
+    <title>Kopi Senja — Tentang Kami</title>
+
+    <!-- Favicon Kopi Senja -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- Google Fonts: Permanent Marker (Judul) & Courier Prime (Mesin Tik) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CDN (Slide 6 Rubrik UTS) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- CSS Eksternal Terpadu (Sesuai Struktur UTS: css/style.css) -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Skip-Link untuk Aksesibilitas Keyboard (Slide 4 Rubrik UTS) -->
+    <a href="#main" class="skip-link">Lewati ke konten utama</a>
+
+    <!-- Header & Navigasi Editorial Kopi Senja -->
+    <header class="header-lebar">
+        <div class="header-brand">
+            <a href="index.html" class="brand-title">
+                ☕ Kopi Senja
+            </a>
+            <span class="brand-est">Ruang Singgah di Surabaya · Est. 2023</span>
+        </div>
+
+        <div class="nav-wrap">
+            <nav>
+                <a href="index.html">Beranda</a>
+                <a href="menu.html">Katalog Menu</a>
+                <a href="tentang.html" aria-current="page">Tentang Kami</a>
+                <a href="kontak.html">Lokasi &amp; Kontak</a>
+            </nav>
+            <div class="lang-switch" title="Pilihan Bahasa">
+                <strong class="lang-active">ID</strong> | <span class="lang-inactive">EN</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Konten Utama Halaman Tentang -->
+    <main class="halaman-tentang" id="main">
+        <h1>Tentang Kopi Senja</h1>
+
+        <p class="lead">
+            Lahir dari kehangatan senja di Surabaya, hadir untuk menemani setiap cerita dan langkah kawan yang singgah.
+        </p>
+
+        <!-- Ilustrasi Peta Isometrik Semesta Kopi Senja (Figure & Figcaption) -->
+        <figure class="hero-media">
+            <img src="images/semesta-senja-map.jpg" alt="Peta Isometrik Semesta Kopi Senja Surabaya" class="banner-komik-senja">
+            <figcaption class="caption-senja">Peta Semesta Kopi Senja — perpaduan ruang seduh hangat, sudut literasi, dan denyut transit kota Surabaya.</figcaption>
+            <div class="tag-kategori">
+                <span class="tag">/ Semesta Senja /</span>
+                <span class="tag">/ Cerita Kami /</span>
+                <span class="tag">/ Nilai &amp; Pilar /</span>
+                <span class="tag">/ Kawan Senja /</span>
+            </div>
+        </figure>
+
+        <!-- Bar Kategori Cerita Aksesibel -->
+        <div class="tentang-kategori-bar">
+            <div class="tentang-kategori-tabs" role="tablist" aria-label="Kategori Cerita Kopi Senja">
+                <button type="button" class="tab-tentang-btn aktif" data-kategori="semua" role="tab" id="tab-semua" aria-selected="true">
+                    Semua Cerita
+                </button>
+                <button type="button" class="tab-tentang-btn" data-kategori="cerita-awal" role="tab" id="tab-cerita-awal" aria-controls="cerita-awal" aria-selected="false">
+                    Cerita Awal
+                </button>
+                <button type="button" class="tab-tentang-btn" data-kategori="pilar-nilai" role="tab" id="tab-pilar-nilai" aria-controls="pilar-nilai" aria-selected="false">
+                    3 Pilar Nilai
+                </button>
+                <button type="button" class="tab-tentang-btn" data-kategori="kawan-senja" role="tab" id="tab-kawan-senja" aria-controls="kawan-senja" aria-selected="false">
+                    Filosofi Kawan
+                </button>
+                <button type="button" class="tab-tentang-btn" data-kategori="jejak-langkah" role="tab" id="tab-jejak-langkah" aria-controls="jejak-langkah" aria-selected="false">
+                    Jejak Langkah
+                </button>
+            </div>
+        </div>
+
+        <!-- Bagian 1: Cerita Awal -->
+        <section class="kartu section-cerita" id="cerita-awal" data-kategori="cerita-awal" role="tabpanel" aria-labelledby="tab-cerita-awal">
+            <h2>Berawal dari Sudut Teduh di Surabaya</h2>
+
+            <p>
+                Di tengah dinamika kota Surabaya yang sibuk dan berenergi tinggi, kami menyadari ada satu momen berharga yang kerap dinantikan banyak orang: <strong>saat matahari mulai condong ke barat dan langit perlahan berubah jingga</strong>.
+            </p>
+
+            <p>
+                Bagi kami, waktu senja adalah jeda. Waktu bagi para mahasiswa, pekerja, hingga perantau untuk menghela napas, meletakkan beban hari ini, dan menikmati secangkir kehangatan sebelum kembali melangkah pulang.
+            </p>
+
+            <div class="sorotan-slogan">
+                &ldquo;Bagi kami, secangkir kopi adalah alasan terbaik untuk memperlambat langkah, duduk bersama, dan saling berbagi cerita.&rdquo;
+                <small>— Catatan Barista Kopi Senja Surabaya</small>
+            </div>
+
+            <p>
+                Kopi Senja didirikan dengan komitmen sederhana: menghadirkan seduhan kopi nusantara yang jujur, bermutu baik, serta ramah di kantong, di dalam ruang yang membuat siapa saja merasa disambut.
+            </p>
+        </section>
+
+        <!-- Bagian 2: Tiga Pilar Nilai Utama -->
+        <section class="kartu section-cerita" id="pilar-nilai" data-kategori="pilar-nilai" role="tabpanel" aria-labelledby="tab-pilar-nilai">
+            <h2>3 Pilar Nilai Kopi Senja</h2>
+
+            <p>
+                Seperti halnya secangkir kopi yang butuh keseimbangan rasa, langkah kami bertumpu pada tiga komitmen utama:
+            </p>
+
+            <div class="pilar-grid">
+                <!-- Pilar 1 -->
+                <div class="pilar-card">
+                    <span class="pilar-angka">1</span>
+                    <h3>Seduhan Jujur Nusantara</h3>
+                    <p>
+                        Biji kopi kami dipasok langsung dari petani lokal Jawa Timur dan penjuru nusantara. Diracik dengan gula aren murni tanpa sirup sintetis yang berlebihan.
+                    </p>
+                </div>
+
+                <!-- Pilar 2 -->
+                <div class="pilar-card">
+                    <span class="pilar-angka">2</span>
+                    <h3>Ruang Singgah yang Teduh</h3>
+                    <p>
+                        Bukan sekadar kedai transaksi cepat. Kami merawat suasana tenang dengan alunan musik lembut, sudut baca, dan stopkontak untuk teman belajar atau bekerja.
+                    </p>
+                </div>
+
+                <!-- Pilar 3 -->
+                <div class="pilar-card">
+                    <span class="pilar-angka">3</span>
+                    <h3>Sapa, Senyum, Seduh</h3>
+                    <p>
+                        Pelayanan hangat layaknya menerima sahabat di teras rumah. Setiap cangkir disajikan dengan senyum tulus dan keramahan khas warga Jawa Timur.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian 3: Filosofi Kawan Senja -->
+        <section class="kartu section-cerita" id="kawan-senja" data-kategori="kawan-senja" role="tabpanel" aria-labelledby="tab-kawan-senja">
+            <h2>Mengapa Kami Memanggilmu &ldquo;Kawan Senja&rdquo;?</h2>
+
+            <figure class="banner-img-box">
+                <img src="images/banner-kawan-senja.jpg" alt="Suasana Kehangatan Kawan Senja di Kedai" class="banner-komik-senja">
+                <figcaption class="caption-senja">Kawan Senja menikmati obrolan hangat di sudut kedai Kopi Senja Surabaya di ujung hari.</figcaption>
+            </figure>
+
+            <p>
+                Di kedai kami, pengunjung bukan sekadar deretan angka di nota pemesanan atau pembeli yang lewat sepintas. Kami memilih menyapa setiap insan yang datang sebagai <strong>Kawan Senja</strong>.
+            </p>
+
+            <p>
+                Karena bagi kami, setiap cangkir yang diseduh membawa pertemuan baru. Ada kawan yang datang mencari ketenangan setelah hari yang panjang, ada yang merajut ide bersama teman kuliah, dan ada yang sekadar ingin berbincang santai dengan barista kami di meja seduh.
+            </p>
+
+            <p>
+                Semangat persaudaraan dan keterbukaan inilah yang menjaga denyut hangat Kopi Senja hingga hari ini.
+            </p>
+        </section>
+
+        <!-- Bagian 4: Linimasa Jejak Langkah -->
+        <section class="kartu section-cerita" id="jejak-langkah" data-kategori="jejak-langkah" role="tabpanel" aria-labelledby="tab-jejak-langkah">
+            <h2>Jejak Langkah Kami</h2>
+
+            <p>
+                Perjalanan sederhana yang terus bertumbuh bersama kehangatan para Kawan Senja:
+            </p>
+
+            <div class="timeline-senja">
+                <!-- Item 2023 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-tahun">2023</span>
+                    <h3>Seduhan Pertama di Surabaya</h3>
+                    <p>
+                        Membuka gerai mungil dengan tiga meja kayu sederhana di sudut Surabaya, menyajikan kopi tubruk klasik dan es kopi susu gula aren buatan rumahan.
+                    </p>
+                </div>
+
+                <!-- Item 2024 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-tahun">2024</span>
+                    <h3>Lahirnya Racikan Ikonik</h3>
+                    <p>
+                        Memperkenalkan menu andalan <em>Kopi Susu Senja Aren</em> dan kreasi segar <em>Senja Cloud Pandan</em> yang langsung menjadi favorit kawan-kawan sekitar.
+                    </p>
+                </div>
+
+                <!-- Item 2025 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-tahun">2025</span>
+                    <h3>Ruang Kolaborasi &amp; Komunitas</h3>
+                    <p>
+                        Menghadirkan rak buku mini dan sudut bincang santai untuk ruang berkumpul komunitas kreatif, pegiat literasi, dan diskusi mahasiswa.
+                    </p>
+                </div>
+
+                <!-- Item 2026 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-tahun">2026</span>
+                    <h3>Layanan Mandiri &amp; Kopi Senja Digital</h3>
+                    <p>
+                        Mengembangkan katalog menu dan sistem pesanan mandiri berbasis web yang responsif, memudahkan kawan memesan tanpa kehilangan sentuhan personal barista.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian 5: Tabel Semantik Asal Usul Biji Kopi Lokal Nusantara (Syarat Wajib Slide 4 UTS) -->
+        <section class="kartu section-cerita" id="pasokan-kopi" data-kategori="pilar-nilai">
+            <h2>Asal Usul Biji Kopi Lokal Nusantara</h2>
+
+            <p>
+                Sebagai bentuk pertanggungjawaban dan kejujuran rasa kepada para Kawan Senja, berikut adalah rincian pasokan biji kopi lokal yang kami kurasi langsung dari kebun petani Jawa Timur:
+            </p>
+
+            <div class="tabel-wadah">
+                <table class="tabel-senja">
+                    <caption>Tabel Transparansi Pasokan Biji Kopi Lokal Kedai Kopi Senja Surabaya (Musim Panen 2026)</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Nama Biji Kopi</th>
+                            <th scope="col">Daerah / Petani</th>
+                            <th scope="col">Ketinggian</th>
+                            <th scope="col">Metode Olah</th>
+                            <th scope="col">Karakter Rasa (Notes)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Ijen Sweet Bourbon</th>
+                            <td>Bondowoso, Jawa Timur</td>
+                            <td>1.400 mdpl</td>
+                            <td>Honey Process</td>
+                            <td>Gula Merah, Apel Hijau, Karamel</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Malang Dampit Robusta</th>
+                            <td>Lereng Semeru, Dampit</td>
+                            <td>800 mdpl</td>
+                            <td>Natural Wash</td>
+                            <td>Cokelat Pekat, Kacang Panggang, Bold</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Argopuro Blue Mountain</th>
+                            <td>Pegunungan Argopuro</td>
+                            <td>1.300 mdpl</td>
+                            <td>Wet Hulled</td>
+                            <td>Jeruk Purut, Teh Hitam, Rempah Lembut</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Arjuno Micro-Lot</th>
+                            <td>Lereng Gn. Arjuno, Prigen</td>
+                            <td>1.250 mdpl</td>
+                            <td>Anaerobic Natural</td>
+                            <td>Ceri Matang, Cokelat Susu, Madu Hutan</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="catatan-seduh">
+                <em>* Seluruh biji kopi disangrai (roasting) segar setiap hari Selasa dan Jumat di Dapur Roastery Kopi Senja Surabaya.</em>
+            </p>
+        </section>
+
+        <!-- Bagian Aksi / Ajakan Berkunjung -->
+        <div class="tentang-cta-box">
+            <h2>Pintu Kami Selalu Terbuka</h2>
+            <p>
+                Secangkir kopi hangat dan obrolan bersahaja telah menantimu di Surabaya.
+            </p>
+            <div class="tentang-cta-aksi">
+                <a href="menu.html" class="tombol">Jelajahi Menu Pilihan</a>
+                <a href="kontak.html" class="tombol-outline">Temukan Lokasi Kedai</a>
+            </div>
+        </div>
+
+        <!-- Garis Pemisah -->
+        <hr class="pemisah">
+    </main>
+
+    <!-- Footer Lengkap & Proporsional -->
+    <footer class="footer-lebar">
+        <div class="footer-container">
+            <!-- Kolom 1: Merek & Profil -->
+            <div class="footer-col">
+                <h4>☕ Kopi Senja Surabaya</h4>
+                <p>
+                    Lahir dari kehangatan seduhan, bertumbuh bersama Kawan Senja. Ruang singgah sederhana untuk berbagi cerita di ujung hari.
+                </p>
+                <div class="footer-badge-kota">
+                    📍 Surabaya, Jawa Timur · Indonesia
+                </div>
+            </div>
+
+            <!-- Kolom 2: Tautan Halaman -->
+            <div class="footer-col">
+                <h4>Tautan Halaman</h4>
+                <ul>
+                    <li><a href="index.html">Beranda Utama</a></li>
+                    <li><a href="menu.html">Katalog Menu &amp; Kasir</a></li>
+                    <li><a href="tentang.html">Tentang &amp; Semesta Senja</a></li>
+                    <li><a href="kontak.html">Lokasi &amp; Kontak</a></li>
+                    <li><a href="demo-css.html">Demo Metode CSS</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Waktu Operasional -->
+            <div class="footer-col">
+                <h4>Waktu Operasional</h4>
+                <div class="jadwal-box">
+                    <div class="jadwal-item">
+                        <span class="jadwal-hari">Senin – Jumat</span>
+                        <span class="jadwal-jam">09.00 – 22.00 WIB</span>
+                    </div>
+                    <div class="jadwal-item">
+                        <span class="jadwal-hari">Sabtu – Minggu</span>
+                        <span class="jadwal-jam">08.00 – 22.30 WIB</span>
+                    </div>
+                </div>
+                <p class="footer-layanan-info">
+                    Menerima pesanan mandiri di tempat (Dine-in) dan bawa pulang (Take-away).
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 Kopi Senja Surabaya. Semua hak dilindungi.</span>
+            <span class="footer-bottom-senja">Dirancang dengan cinta untuk Kawan Senja.</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 Bundle JS CDN (Slide 6 Rubrik UTS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- JavaScript Terpadu -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

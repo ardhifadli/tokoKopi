@@ -1,0 +1,509 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="100%" height="auto" role="img" aria-labelledby="senjaTitle senjaDesc">
+  <title id="senjaTitle">Ilustrasi Suasana Kawan Senja di Kedai Kopi Senja</title>
+  <desc id="senjaDesc">Pemandangan hangat bagian depan kedai Kopi Senja di malam hari dengan karakter pelanggan ngobrol, memesan donat/toast di telepon, ojek online mengambil pesanan, dan barista menyambut ramah.</desc>
+
+  <defs>
+    <!-- Gradasi Langit Malam Senja Surabaya -->
+    <linearGradient id="langitMalam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1B120C"/>
+      <stop offset="60%" stop-color="#2B1B12"/>
+      <stop offset="100%" stop-color="#3D2619"/>
+    </linearGradient>
+
+    <!-- Gradasi Cahaya Hangat Interior Kedai -->
+    <linearGradient id="cahayaDalam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF0D4"/>
+      <stop offset="50%" stop-color="#FCE1B6"/>
+      <stop offset="100%" stop-color="#F5D298"/>
+    </linearGradient>
+
+    <!-- Pendaran Lampu Hangat -->
+    <radialGradient id="pendarLampu" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF6E0" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#FCE1B6" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FCE1B6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Bayangan Halus Karakter -->
+    <radialGradient id="bayanganOrang" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1E120A" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#1E120A" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Klip Pemotong Baju Kaos Karakter 3 Agar Garis Biru Tidak Bocor Keluar -->
+    <clipPath id="clipBajuK3">
+      <path d="M 14 66 Q 20 100 18 135 H 54 Q 56 100 52 66 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- ================= LATAR BELAKANG KEDAI ================= -->
+  <!-- Langit Atas -->
+  <rect width="1200" height="480" fill="url(#langitMalam)"/>
+
+  <!-- Kanopi Atap Kedai -->
+  <rect x="0" y="0" width="1200" height="42" fill="#20140D"/>
+  <rect x="0" y="38" width="1200" height="8" fill="#A34A22"/>
+
+  <!-- Logo Merek Kopi Senja di Kanopi Atas -->
+  <g transform="translate(60, 12)">
+    <!-- Simbol Cangkir Senja -->
+    <path d="M0 4 l4 20 h16 l4 -20 z" fill="#FFF9F0"/>
+    <path d="M22 8 q6 0 6 6 q0 6 -6 6" fill="none" stroke="#FFF9F0" stroke-width="2.5"/>
+    <text x="36" y="21" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="#FFF9F0" letter-spacing="2">KOPI SENJA</text>
+    <text x="175" y="21" font-family="sans-serif" font-size="11" fill="#E8D9C5" font-style="italic">· Surabaya</text>
+  </g>
+
+
+
+  <!-- Dinding Kaca & Interior Kedai -->
+  <g transform="translate(0, 46)">
+    <!-- Dinding Dalam Kedai yang Menyala Kuning Hangat -->
+    <rect x="30" y="0" width="1140" height="340" fill="url(#cahayaDalam)"/>
+
+    <!-- Pendar Cahaya Lampu Plafon -->
+    <circle cx="200" cy="50" r="140" fill="url(#pendarLampu)"/>
+    <circle cx="500" cy="50" r="140" fill="url(#pendarLampu)"/>
+    <circle cx="800" cy="50" r="140" fill="url(#pendarLampu)"/>
+    <circle cx="1040" cy="50" r="140" fill="url(#pendarLampu)"/>
+
+    <!-- Kipas Angin Gantung Plafon Vintage -->
+    <g transform="translate(320, 25)" stroke="#5A3A28" stroke-width="2.5" fill="#5A3A28">
+      <line x1="0" y1="0" x2="0" y2="18"/>
+      <ellipse cx="0" cy="20" rx="10" ry="4"/>
+      <line x1="-36" y1="20" x2="36" y2="20" stroke-width="3.5"/>
+    </g>
+    <g transform="translate(900, 25)" stroke="#5A3A28" stroke-width="2.5" fill="#5A3A28">
+      <line x1="0" y1="0" x2="0" y2="18"/>
+      <ellipse cx="0" cy="20" rx="10" ry="4"/>
+      <line x1="-36" y1="20" x2="36" y2="20" stroke-width="3.5"/>
+    </g>
+
+    <!-- Lampu Gantung Hangat -->
+    <g fill="#A34A22" stroke="#2B1B12" stroke-width="2">
+      <line x1="160" y1="0" x2="160" y2="35"/>
+      <path d="M142 52 a18 18 0 0 1 36 0 z"/>
+      <line x1="460" y1="0" x2="460" y2="30"/>
+      <path d="M444 46 a16 16 0 0 1 32 0 z"/>
+      <line x1="760" y1="0" x2="760" y2="35"/>
+      <path d="M742 52 a18 18 0 0 1 36 0 z"/>
+      <line x1="1020" y1="0" x2="1020" y2="30"/>
+      <path d="M1004 46 a16 16 0 0 1 32 0 z"/>
+    </g>
+
+    <!-- Rak Kopi & Papan Menu di Belakang Counter Kanan -->
+    <g transform="translate(740, 70)">
+      <rect x="0" y="0" width="180" height="90" rx="4" fill="#E8D2B0" stroke="#8B5A3C" stroke-width="2"/>
+      <line x1="0" y1="30" x2="180" y2="30" stroke="#8B5A3C" stroke-width="2"/>
+      <line x1="0" y1="60" x2="180" y2="60" stroke="#8B5A3C" stroke-width="2"/>
+      <!-- Toples Biji Kopi -->
+      <rect x="15" y="6" width="18" height="20" rx="2" fill="#8B5A3C"/>
+      <rect x="42" y="6" width="18" height="20" rx="2" fill="#A34A22"/>
+      <rect x="70" y="6" width="18" height="20" rx="2" fill="#2B1B12"/>
+      <rect x="100" y="6" width="18" height="20" rx="2" fill="#8B5A3C"/>
+      <rect x="130" y="6" width="18" height="20" rx="2" fill="#A34A22"/>
+      <!-- Papan Tulis Menu Kecil -->
+      <rect x="15" y="38" width="150" height="44" rx="3" fill="#2B1B12"/>
+      <line x1="25" y1="48" x2="80" y2="48" stroke="#FFF9F0" stroke-width="2"/>
+      <line x1="25" y1="58" x2="110" y2="58" stroke="#FFF9F0" stroke-width="2"/>
+      <line x1="25" y1="68" x2="95" y2="68" stroke="#FFF9F0" stroke-width="2"/>
+      <circle cx="140" cy="58" r="10" fill="#A34A22"/>
+    </g>
+
+    <!-- Meja Kasir & Barista Kanan (Menopang Mesin Espresso & Cangkir Kopi) -->
+    <g transform="translate(930, 210)">
+      <!-- Daun Meja Kayu Solid -->
+      <rect x="-10" y="0" width="230" height="14" rx="3" fill="#5A3A28" stroke="#110B08" stroke-width="2.5"/>
+      <!-- Badan Meja Barista Panel Kayu Hangat -->
+      <rect x="0" y="14" width="210" height="120" fill="#C9B29B" stroke="#110B08" stroke-width="2.5"/>
+      <line x1="52" y1="14" x2="52" y2="134" stroke="#A8927C" stroke-width="2"/>
+      <line x1="105" y1="14" x2="105" y2="134" stroke="#A8927C" stroke-width="2"/>
+      <line x1="158" y1="14" x2="158" y2="134" stroke="#A8927C" stroke-width="2"/>
+      <!-- Mesin Espresso Klasik di Atas Meja -->
+      <g transform="translate(90, -75)">
+        <rect x="0" y="0" width="95" height="75" rx="5" fill="#2B1B12" stroke="#110B08" stroke-width="2.5"/>
+        <rect x="8" y="10" width="80" height="8" rx="2" fill="#A34A22"/>
+        <circle cx="22" cy="35" r="5" fill="#FFF9F0"/>
+        <circle cx="42" cy="35" r="5" fill="#FFF9F0"/>
+        <rect x="58" y="25" width="26" height="24" rx="2" fill="#8B5A3C"/>
+      </g>
+      <!-- Cup Kopi Bertumpuk di Atas Meja Barista (Ditempatkan Rapi di Permukaan Meja) -->
+      <g transform="translate(15, -28)">
+        <path d="M0 0 l3 28 h14 l3 -28 z" fill="#FFF9F0" stroke="#110B08" stroke-width="1.8"/>
+        <path d="M20 0 l3 28 h14 l3 -28 z" fill="#FFF9F0" stroke="#110B08" stroke-width="1.8"/>
+      </g>
+    </g>
+
+    <!-- Bingkai Kaca Depan & Kusen Kayu Kedai -->
+    <rect x="30" y="0" width="1140" height="12" fill="#3D2619"/>
+    <line x1="620" y1="0" x2="620" y2="340" stroke="#3D2619" stroke-width="14"/>
+    <line x1="30" y1="0" x2="30" y2="340" stroke="#3D2619" stroke-width="14"/>
+    <line x1="1170" y1="0" x2="1170" y2="340" stroke="#3D2619" stroke-width="14"/>
+    <line x1="30" y1="334" x2="1170" y2="334" stroke="#3D2619" stroke-width="12"/>
+
+    <!-- Tanaman Hias Pot Tropis di Depan Kaca -->
+    <g transform="translate(640, 240)">
+      <path d="M0 70 l8 30 h24 l8 -30 z" fill="#8B5A3C" stroke="#2B1B12" stroke-width="2"/>
+      <!-- Daun Monstera / Palem -->
+      <ellipse cx="20" cy="50" rx="14" ry="26" fill="#435E44" transform="rotate(-15 20 50)"/>
+      <ellipse cx="32" cy="46" rx="12" ry="24" fill="#314832" transform="rotate(20 32 46)"/>
+      <ellipse cx="8" cy="52" rx="10" ry="20" fill="#587A5A" transform="rotate(-35 8 52)"/>
+    </g>
+    <g transform="translate(1110, 240)">
+      <path d="M0 70 l8 30 h24 l8 -30 z" fill="#A34A22" stroke="#2B1B12" stroke-width="2"/>
+      <ellipse cx="20" cy="48" rx="13" ry="26" fill="#435E44" transform="rotate(10 20 48)"/>
+      <ellipse cx="10" cy="52" rx="11" ry="22" fill="#314832" transform="rotate(-25 10 52)"/>
+    </g>
+  </g>
+
+  <!-- Lantai Teras / Trotoar Depan Kedai -->
+  <rect x="0" y="386" width="1200" height="94" fill="#544B45"/>
+  <rect x="0" y="386" width="1200" height="6" fill="#3A332E"/>
+  <!-- Pola Ubin Trotoar Halus -->
+  <line x1="0" y1="416" x2="1200" y2="416" stroke="#463E39" stroke-width="1"/>
+  <line x1="0" y1="446" x2="1200" y2="446" stroke="#463E39" stroke-width="1"/>
+  <g stroke="#463E39" stroke-width="1">
+    <line x1="150" y1="386" x2="150" y2="480"/>
+    <line x1="300" y1="386" x2="300" y2="480"/>
+    <line x1="450" y1="386" x2="450" y2="480"/>
+    <line x1="600" y1="386" x2="600" y2="480"/>
+    <line x1="750" y1="386" x2="750" y2="480"/>
+    <line x1="900" y1="386" x2="900" y2="480"/>
+    <line x1="1050" y1="386" x2="1050" y2="480"/>
+  </g>
+
+
+  <!-- ================= KARAKTER & INTERAKSI (KOMIK EDITORIAL) ================= -->
+
+  <!-- AREA KIRI: Meja Kawan Mengobrol & Telepon -->
+  <!-- Meja Kayu Panjang & Bangku Luar -->
+  <g id="mejaLuar">
+    <!-- Bayangan Meja -->
+    <ellipse cx="320" cy="402" rx="240" ry="12" fill="url(#bayanganOrang)"/>
+    <!-- Kaki Bangku & Meja -->
+    <rect x="110" y="330" width="8" height="70" fill="#2B1B12"/>
+    <rect x="230" y="330" width="8" height="70" fill="#2B1B12"/>
+    <rect x="350" y="330" width="8" height="70" fill="#2B1B12"/>
+    <rect x="520" y="330" width="8" height="70" fill="#2B1B12"/>
+    <!-- Daun Meja Panjang Kayu -->
+    <rect x="100" y="318" width="440" height="14" rx="3" fill="#D3B896" stroke="#2B1B12" stroke-width="3"/>
+    <!-- Kursi / Bench -->
+    <rect x="80" y="350" width="470" height="10" rx="2" fill="#BFA27E" stroke="#2B1B12" stroke-width="2.5"/>
+  </g>
+
+  <!-- KARAKTER 1: Pemuda Baju Kotak-Kotak (Duduk Sambil Ngopi & Ngobrol) -->
+  <g id="karakter1" transform="translate(100, 195)">
+    <!-- Bayangan Kaki -->
+    <ellipse cx="40" cy="205" rx="35" ry="8" fill="url(#bayanganOrang)"/>
+    <!-- Kaki & Celana Gelap -->
+    <path d="M22 135 l-10 65 h22 l10 -65 z" fill="#241B18" stroke="#110B08" stroke-width="2.5"/>
+    <path d="M48 135 l-5 65 h22 l15 -65 z" fill="#241B18" stroke="#110B08" stroke-width="2.5"/>
+    <!-- Sepatu Sneakers -->
+    <ellipse cx="22" cy="202" rx="14" ry="6" fill="#FFF9F0" stroke="#110B08" stroke-width="2"/>
+    <ellipse cx="76" cy="202" rx="14" ry="6" fill="#FFF9F0" stroke="#110B08" stroke-width="2"/>
+    <!-- Badan & Kemeja Kotak-Kotak Biru Muda -->
+    <path d="M15 62 q-12 35 4 75 h48 q14 -40 2 -75 z" fill="#87B4C8" stroke="#110B08" stroke-width="3"/>
+    <!-- Garis Kotak Kemeja -->
+    <g stroke="#538298" stroke-width="1.8">
+      <line x1="28" y1="65" x2="28" y2="135"/>
+      <line x1="42" y1="65" x2="42" y2="135"/>
+      <line x1="56" y1="65" x2="56" y2="135"/>
+      <line x1="16" y1="85" x2="68" y2="85"/>
+      <line x1="18" y1="110" x2="68" y2="110"/>
+    </g>
+    <!-- Lengan & Tangan Memegang Cup Kopi -->
+    <path d="M55 75 q25 15 28 42 l-12 4 q-8 -22 -22 -30 z" fill="#87B4C8" stroke="#110B08" stroke-width="2.5"/>
+    <circle cx="82" cy="118" r="8" fill="#8C5C42" stroke="#110B08" stroke-width="2"/>
+    <!-- Cup Kopi Kertas -->
+    <path d="M80 108 l4 20 h14 l4 -20 z" fill="#FFF9F0" stroke="#110B08" stroke-width="2"/>
+    <rect x="79" y="105" width="24" height="4" rx="2" fill="#A34A22"/>
+    <!-- Leher & Kepala -->
+    <rect x="36" y="44" width="16" height="20" fill="#8C5C42" stroke="#110B08" stroke-width="2"/>
+    <ellipse cx="44" cy="32" rx="19" ry="21" fill="#8C5C42" stroke="#110B08" stroke-width="3"/>
+    <!-- Rambut Keriting Khas -->
+    <path d="M22 28 q6 -22 26 -22 q24 0 24 18 q-8 -6 -18 -4 q-12 2 -18 14 q-8 -2 -14 -6 z" fill="#1C1410"/>
+    <circle cx="26" cy="18" r="6" fill="#1C1410"/>
+    <circle cx="36" cy="12" r="7" fill="#1C1410"/>
+    <circle cx="48" cy="12" r="7" fill="#1C1410"/>
+    <circle cx="60" cy="18" r="6" fill="#1C1410"/>
+    <!-- Mata & Senyum Terbuka Ngobrol -->
+    <circle cx="53" cy="28" r="3" fill="#1C1410"/>
+    <path d="M48 38 q8 8 16 0" fill="#943B20" stroke="#110B08" stroke-width="2"/>
+  </g>
+
+  <!-- KARAKTER 2: Kawan Berjaket Kuning & Topi (Melambaikan Tangan Antusias) -->
+  <g id="karakter2" transform="translate(220, 195)">
+    <!-- Bayangan Kaki -->
+    <ellipse cx="45" cy="205" rx="35" ry="8" fill="url(#bayanganOrang)"/>
+    <!-- Celana Denim Biru Terang -->
+    <path d="M30 135 l-12 65 h22 l10 -65 z" fill="#7FA7C4" stroke="#110B08" stroke-width="2.5"/>
+    <path d="M52 135 l12 65 h22 l-8 -65 z" fill="#7FA7C4" stroke="#110B08" stroke-width="2.5"/>
+    <!-- Sepatu Sneakers Putih -->
+    <ellipse cx="28" cy="202" rx="14" ry="6" fill="#FFF9F0" stroke="#110B08" stroke-width="2"/>
+    <ellipse cx="80" cy="202" rx="14" ry="6" fill="#FFF9F0" stroke="#110B08" stroke-width="2"/>
+    <!-- Jaket Kuning Mustar Khas Senja -->
+    <path d="M20 62 q2 35 12 75 h52 q6 -40 2 -75 z" fill="#E2A638" stroke="#110B08" stroke-width="3"/>
+    <!-- Lengan Kiri Santai di Meja -->
+    <path d="M22 75 q-18 20 -8 45 l14 -3 q-4 -18 8 -30 z" fill="#E2A638" stroke="#110B08" stroke-width="2.5"/>
+    <!-- Lengan Kanan Melambai Antusias -->
+    <path d="M72 70 q20 -28 35 -36 l10 8 q-14 16 -28 42 z" fill="#E2A638" stroke="#110B08" stroke-width="2.5"/>
+    <!-- Telapak Tangan Menyapa / Bercerita -->
+    <g transform="translate(108, 30)">
+      <circle cx="8" cy="8" r="8" fill="#E0A785" stroke="#110B08" stroke-width="2"/>
+      <line x1="4" y1="2" x2="4" y2="8" stroke="#110B08" stroke-width="2"/>
+      <line x1="8" y1="0" x2="8" y2="8" stroke="#110B08" stroke-width="2"/>
+      <line x1="12" y1="2" x2="12" y2="8" stroke="#110B08" stroke-width="2"/>
+    </g>
+    <!-- Leher & Kepala -->
+    <rect x="42" y="44" width="16" height="20" fill="#E0A785" stroke="#110B08" stroke-width="2"/>
+    <ellipse cx="50" cy="34" rx="18" ry="20" fill="#E0A785" stroke="#110B08" stroke-width="3"/>
+    <!-- Topi Baseball Merah Bata Senja Terbalik/Menghadap Depan -->
+    <path d="M32 24 q18 -18 38 0 l16 4 l-6 4 l-12 -2 q-18 6 -36 -6 z" fill="#A34A22" stroke="#110B08" stroke-width="2.5"/>
+    <!-- Hidung, Mata & Senyum Lebar -->
+    <circle cx="44" cy="32" r="3" fill="#1C1410"/>
+    <path d="M42 40 q10 6 18 -2" fill="none" stroke="#110B08" stroke-width="2.5"/>
+  </g>
+
+  <!-- Piring Roti Toast & Cangkir Kopi di Meja Antara Mereka -->
+  <g transform="translate(225, 305)">
+    <!-- Piring Toast -->
+    <ellipse cx="25" cy="15" rx="22" ry="8" fill="#FFF9F0" stroke="#110B08" stroke-width="2"/>
+    <!-- Roti Panggang Toast Cokelat Emas -->
+    <polygon points="12,12 28,6 38,13 22,17" fill="#C9924E" stroke="#110B08" stroke-width="1.8"/>
+    <!-- Selai Butter Mentega Meleleh -->
+    <rect x="22" y="10" width="8" height="4" rx="1" fill="#FFDF78"/>
+    <!-- Gelas Kopi Kaca Es Susu Aren -->
+    <rect x="60" y="0" width="16" height="22" rx="3" fill="#FFF8EE" stroke="#110B08" stroke-width="2"/>
+    <rect x="62" y="12" width="12" height="8" fill="#6B4028"/>
+    <line x1="68" y1="-8" x2="68" y2="2" stroke="#A34A22" stroke-width="2"/>
+  </g>
+
+  <!-- KARAKTER 3: Kawan Perempuan Sedang Telepon Sambil Duduk di Meja Kanan (Proporsional & Garis Rapi) -->
+  <g id="karakter3" transform="translate(435, 190)">
+    <!-- Bayangan Kaki -->
+    <ellipse cx="35" cy="210" rx="30" ry="8" fill="url(#bayanganOrang)"/>
+
+    <!-- Tas Kulit Merah Bata di Atas Meja -->
+    <g transform="translate(-40, 102)">
+      <path d="M0 24 q0 -18 16 -18 q16 0 16 18 z" fill="#993B1F" stroke="#110B08" stroke-width="2.5"/>
+      <path d="M6 6 q10 -10 20 0" fill="none" stroke="#110B08" stroke-width="2"/>
+      <rect x="8" y="14" width="16" height="8" rx="2" fill="#E8D9C5"/>
+    </g>
+
+    <!-- Celana Panjang Hitam Rapi -->
+    <path d="M18 135 l-18 68 h18 l14 -68 z" fill="#1C1816" stroke="#110B08" stroke-width="2.5"/>
+    <path d="M38 135 l-6 68 h18 l18 -68 z" fill="#1C1816" stroke="#110B08" stroke-width="2.5"/>
+    <!-- Sepatu Flat Putih -->
+    <ellipse cx="10" cy="206" rx="12" ry="5" fill="#FFF9F0" stroke="#110B08" stroke-width="2"/>
+    <ellipse cx="44" cy="206" rx="12" ry="5" fill="#FFF9F0" stroke="#110B08" stroke-width="2"/>
+
+    <!-- Baju Kaos Garis-Garis Biru-Putih (Terkunci Sempurna di Dalam Klip, Garis Tidak Bocor) -->
+    <g clip-path="url(#clipBajuK3)">
+      <path d="M 14 66 Q 20 100 18 135 H 54 Q 56 100 52 66 Z" fill="#FFF9F0" stroke="#110B08" stroke-width="3"/>
+      <line x1="0" y1="80" x2="70" y2="80" stroke="#3B658A" stroke-width="3.5"/>
+      <line x1="0" y1="94" x2="70" y2="94" stroke="#3B658A" stroke-width="3.5"/>
+      <line x1="0" y1="108" x2="70" y2="108" stroke="#3B658A" stroke-width="3.5"/>
+      <line x1="0" y1="122" x2="70" y2="122" stroke="#3B658A" stroke-width="3.5"/>
+    </g>
+    <!-- Garis Tepi Kontur Baju Kaos -->
+    <path d="M 14 66 Q 20 100 18 135 H 54 Q 56 100 52 66 Z" fill="none" stroke="#110B08" stroke-width="2.5"/>
+
+    <!-- Lengan Kiri Santai -->
+    <path d="M 14 68 Q 6 88 12 110 L 22 108 Q 18 90 22 72 Z" fill="#FFF9F0" stroke="#110B08" stroke-width="2"/>
+
+    <!-- Lengan Kanan Mengangkat Smartphone ke Telinga (Lekukan Natural & Proporsional) -->
+    <path d="M 48 70 Q 64 68 56 46 L 46 50 Q 52 64 42 72 Z" fill="#E8B49E" stroke="#110B08" stroke-width="2.2"/>
+    <!-- Lengan Baju Putih di Pundak -->
+    <path d="M 44 66 Q 52 68 56 74 L 46 80 Q 42 74 42 66 Z" fill="#FFF9F0" stroke="#110B08" stroke-width="2"/>
+    
+    <!-- Smartphone Hitam di Dekat Telinga -->
+    <rect x="36" y="22" width="10" height="20" rx="3" fill="#1C1816" stroke="#FFF9F0" stroke-width="1.2" transform="rotate(-10 36 22)"/>
+    <!-- Jari-Jari Tangan Memegang HP Rapi -->
+    <circle cx="42" cy="34" r="5" fill="#E8B49E" stroke="#110B08" stroke-width="1.8"/>
+
+    <!-- Leher & Kepala Natural -->
+    <rect x="26" y="44" width="14" height="22" fill="#E8B49E" stroke="#110B08" stroke-width="2"/>
+    <ellipse cx="32" cy="32" rx="16" ry="18" fill="#E8B49E" stroke="#110B08" stroke-width="2.5"/>
+
+    <!-- Rambut Bob Hitam Rapi Membingkai Wajah -->
+    <path d="M 16 26 Q 20 8 34 8 Q 50 8 48 26 Q 48 38 46 48 L 40 46 Q 42 36 40 26 Q 30 18 20 28 Q 18 36 18 46 L 14 44 Z" fill="#1C1512"/>
+
+    <!-- Wajah: 2 Mata Ekspresif & Senyum Manis Berbicara di HP -->
+    <ellipse cx="23" cy="28" rx="2" ry="2.5" fill="#110B08"/>
+    <ellipse cx="33" cy="28" rx="2" ry="2.5" fill="#110B08"/>
+    <path d="M 25 36 Q 29 41 34 36" fill="none" stroke="#993B1F" stroke-width="2" stroke-linecap="round"/>
+    <!-- Rona Pipi Manis Lembut -->
+    <circle cx="20" cy="33" r="3.5" fill="#EAA897" opacity="0.6"/>
+    <circle cx="36" cy="33" r="3.5" fill="#EAA897" opacity="0.6"/>
+  </g>
+
+  <!-- GELEMBUNG KOMIK PERCAKAPAN (SPEECH BUBBLE) KAWAN SENJA -->
+  <g id="speechBubble" transform="translate(370, 75)">
+    <!-- Bayangan Halus Bubble -->
+    <path d="M10 12 q0 -12 14 -12 h140 q14 0 14 12 v60 q0 12 -14 12 h-80 l-24 22 l4 -22 h-40 q-14 0 -14 -12 z" fill="rgba(30,18,10,0.15)" transform="translate(2, 4)"/>
+    <!-- Badan Balon Kata Putih Bersih -->
+    <path d="M10 12 q0 -12 14 -12 h140 q14 0 14 12 v60 q0 12 -14 12 h-80 l-24 22 l4 -22 h-40 q-14 0 -14 -12 z" fill="#FFFDF8" stroke="#2B1B12" stroke-width="2.5"/>
+    <!-- Teks Percakapan Ramah Kopi Senja Surabaya -->
+    <text x="84" y="28" font-family="Georgia, serif" font-size="12" font-weight="bold" fill="#2B1B12" text-anchor="middle">
+      Rek, pesen Kopi Susu
+    </text>
+    <text x="84" y="46" font-family="Georgia, serif" font-size="11" font-weight="bold" fill="#A34A22" text-anchor="middle">
+      Senja Aren ambek
+    </text>
+    <text x="84" y="64" font-family="Georgia, serif" font-size="11" font-weight="bold" fill="#2B1B12" text-anchor="middle">
+      Roti Toast Butter yuk!
+    </text>
+  </g>
+
+
+  <!-- AREA KANAN: Pelanggan Tetangga, Driver Ojol & Barista Ramah -->
+
+  <!-- KARAKTER 4: Warga Tetangga Kaos Oranye & Celana Pendek (Melihat Menu) -->
+  <g id="karakter4" transform="translate(670, 190)">
+    <!-- Bayangan Kaki -->
+    <ellipse cx="32" cy="214" rx="25" ry="8" fill="url(#bayanganOrang)"/>
+    <!-- Kaki & Sandal Santai -->
+    <rect x="18" y="150" width="12" height="50" fill="#E5AA8A" stroke="#110B08" stroke-width="2"/>
+    <rect x="36" y="150" width="12" height="50" fill="#E5AA8A" stroke="#110B08" stroke-width="2"/>
+    <!-- Sandal Selop Santai -->
+    <path d="M10 204 h24 v6 h-24 z" fill="#1C1816" stroke="#110B08" stroke-width="2"/>
+    <path d="M32 204 h24 v6 h-24 z" fill="#1C1816" stroke="#110B08" stroke-width="2"/>
+    <!-- Celana Pendek Denim Biru Terang -->
+    <path d="M12 115 l-6 40 h24 l8 -28 l8 28 h24 l-6 -40 z" fill="#6B97B8" stroke="#110B08" stroke-width="2.5"/>
+    <!-- Baju Kaos Oranye Bata Senja -->
+    <path d="M8 58 q-14 30 -4 60 h54 q12 -30 2 -60 z" fill="#DD6B35" stroke="#110B08" stroke-width="3"/>
+    <!-- Lengan di Belakang Punggung (Gaya Khas Santai Warga Lokal) -->
+    <path d="M10 65 q-12 25 -4 45 l12 -2 q-4 -18 2 -32 z" fill="#DD6B35" stroke="#110B08" stroke-width="2.5"/>
+    <path d="M54 65 q12 25 4 45 l-12 -2 q4 -18 -2 -32 z" fill="#DD6B35" stroke="#110B08" stroke-width="2.5"/>
+    <!-- Leher & Kepala Menengadah ke Papan Menu -->
+    <rect x="22" y="38" width="16" height="22" fill="#E5AA8A" stroke="#110B08" stroke-width="2"/>
+    <ellipse cx="34" cy="28" rx="18" ry="20" fill="#E5AA8A" stroke="#110B08" stroke-width="3"/>
+    <!-- Rambut Ikal Hitam Lebat -->
+    <path d="M16 26 q2 -22 24 -22 q20 0 20 18 q-8 -4 -16 0 q-10 2 -14 16 z" fill="#1F1714"/>
+    <circle cx="20" cy="16" r="6" fill="#1F1714"/>
+    <circle cx="32" cy="10" r="7" fill="#1F1714"/>
+    <circle cx="44" cy="14" r="6" fill="#1F1714"/>
+    <!-- Mata & Wajah Menatap ke Atas Papan Menu -->
+    <circle cx="42" cy="24" r="3" fill="#1C1410"/>
+    <path d="M38 34 q8 -4 14 2" fill="none" stroke="#110B08" stroke-width="2"/>
+  </g>
+
+  <!-- KARAKTER 5: Driver Ojek Online (Jaket Hijau, Helm & Bawa Pesanan Kopi Senja) -->
+  <g id="karakter5" transform="translate(790, 175)">
+    <!-- Bayangan Kaki -->
+    <ellipse cx="40" cy="230" rx="30" ry="8" fill="url(#bayanganOrang)"/>
+    <!-- Celana Panjang Kargo Cokelat / Khaki -->
+    <path d="M22 135 l-6 85 h22 l8 -85 z" fill="#756456" stroke="#110B08" stroke-width="2.5"/>
+    <path d="M46 135 l2 85 h22 l8 -85 z" fill="#756456" stroke="#110B08" stroke-width="2.5"/>
+    <!-- Sepatu Riding Hitam -->
+    <ellipse cx="24" cy="222" rx="15" ry="7" fill="#1E1917" stroke="#110B08" stroke-width="2"/>
+    <ellipse cx="66" cy="222" rx="15" ry="7" fill="#1E1917" stroke="#110B08" stroke-width="2"/>
+
+    <!-- Kantong Plastik Take-Away Berisi 2 Cup Kopi Senja -->
+    <g transform="translate(-15, 145)">
+      <!-- Tali Plastik Ditenteng Tangan -->
+      <path d="M16 0 q-10 22 -6 45 h26 q4 -23 -6 -45 z" fill="none" stroke="#FFF9F0" stroke-width="2" opacity="0.85"/>
+      <!-- Kantong Plastik Transparan Bersih -->
+      <rect x="4" y="24" width="34" height="42" rx="4" fill="rgba(255,255,255,0.7)" stroke="#2B1B12" stroke-width="1.8"/>
+      <!-- 2 Cup Kopi Senja di Dalam Plastik -->
+      <rect x="8" y="32" width="11" height="24" rx="2" fill="#A34A22"/>
+      <rect x="23" y="32" width="11" height="24" rx="2" fill="#8B5A3C"/>
+      <line x1="8" y1="42" x2="19" y2="42" stroke="#FFF9F0" stroke-width="1.5"/>
+      <line x1="23" y1="42" x2="34" y2="42" stroke="#FFF9F0" stroke-width="1.5"/>
+    </g>
+
+    <!-- Lengan Kiri Membawa Kantong Kopi -->
+    <path d="M25 72 q-22 35 -14 70 l12 -2 q-6 -28 12 -55 z" fill="#2E7D47" stroke="#110B08" stroke-width="2.5"/>
+    <circle cx="15" cy="144" r="7" fill="#8A5A40" stroke="#110B08" stroke-width="2"/>
+
+    <!-- Jaket Hijau Hitam Khas Ojol Indonesia -->
+    <path d="M22 62 q-10 35 -4 75 h56 q6 -40 2 -75 z" fill="#2E7D47" stroke="#110B08" stroke-width="3"/>
+    <!-- Bagian Tengah Jaket Hitam & Strip Reflektor Putih -->
+    <rect x="36" y="62" width="24" height="75" fill="#1E1C1A"/>
+    <line x1="24" y1="92" x2="72" y2="92" stroke="#FFF9F0" stroke-width="3"/>
+
+    <!-- Lengan Kanan Memegang Smartphone (Memperlihatkan Orderan ke Barista) -->
+    <path d="M68 70 q25 2 40 -26 l10 6 q-12 28 -38 35 z" fill="#2E7D47" stroke="#110B08" stroke-width="2.5"/>
+    <!-- Tangan Memegang Smartphone -->
+    <circle cx="118" cy="46" r="6" fill="#8A5A40" stroke="#110B08" stroke-width="2"/>
+    <!-- HP Driver Menghadap Barista dengan Layar Order Hijau -->
+    <g transform="translate(112, 28) rotate(10)">
+      <rect x="0" y="0" width="14" height="24" rx="3" fill="#1C1816" stroke="#FFF9F0" stroke-width="1.5"/>
+      <rect x="2" y="3" width="10" height="15" fill="#2E7D47"/>
+      <!-- Tanda Centang Orderan Masuk -->
+      <path d="M 4 10 L 6 13 L 10 7" fill="none" stroke="#FFF" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Leher Driver -->
+    <rect x="42" y="48" width="16" height="18" fill="#8A5A40" stroke="#110B08" stroke-width="2"/>
+
+    <!-- Helm Ojol Hijau Ikonik -->
+    <ellipse cx="50" cy="28" rx="22" ry="24" fill="#2E7D47" stroke="#110B08" stroke-width="3"/>
+    <!-- Lubang Visor Kaca Helm Terbuka Menampilkan Wajah Humanis -->
+    <path d="M 32 26 Q 50 14 68 26 L 66 44 Q 50 48 34 44 Z" fill="#E8D9C5" stroke="#110B08" stroke-width="2"/>
+    <!-- Dua Mata Ramah & Senyum Bahagia (Bukan Satu Titik!) -->
+    <path d="M 39 33 Q 43 28 47 33" fill="none" stroke="#110B08" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 53 33 Q 57 28 61 33" fill="none" stroke="#110B08" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 45 40 Q 50 45 55 40" fill="none" stroke="#110B08" stroke-width="2" stroke-linecap="round"/>
+    <!-- Kaca Helm Terbuka di Atas Dahi -->
+    <path d="M 32 18 Q 50 8 68 18" fill="none" stroke="#1E1917" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- KARAKTER 6: Barista Kopi Senja (Senyum Ramah & Gestur Menyambut Hangat) -->
+  <g id="karakter6" transform="translate(970, 180)">
+    <!-- Bayangan Kaki -->
+    <ellipse cx="45" cy="224" rx="28" ry="8" fill="url(#bayanganOrang)"/>
+    <!-- Celana Hitam Rapi -->
+    <path d="M28 140 l-8 80 h20 l10 -80 z" fill="#1E1A18" stroke="#110B08" stroke-width="2.5"/>
+    <path d="M50 140 l4 80 h20 l4 -80 z" fill="#1E1A18" stroke="#110B08" stroke-width="2.5"/>
+    <!-- Sepatu Kerja Hitam -->
+    <ellipse cx="28" cy="222" rx="14" ry="6" fill="#1E1A18" stroke="#110B08" stroke-width="2"/>
+    <ellipse cx="68" cy="222" rx="14" ry="6" fill="#1E1A18" stroke="#110B08" stroke-width="2"/>
+
+    <!-- Kaos Dalam Cokelat Kopi -->
+    <path d="M24 60 q-10 35 -4 80 h52 q6 -45 0 -80 z" fill="#3D2619" stroke="#110B08" stroke-width="3"/>
+    <!-- Celemek (Apron) Khas Barista Kopi Senja Warna Krem Latte -->
+    <path d="M32 75 h30 l6 65 h-42 z" fill="#C9A887" stroke="#110B08" stroke-width="2.5"/>
+    <!-- Tali Celemek Silang -->
+    <line x1="32" y1="75" x2="25" y2="60" stroke="#A34A22" stroke-width="2.5"/>
+    <line x1="62" y1="75" x2="69" y2="60" stroke="#A34A22" stroke-width="2.5"/>
+    <!-- Kantong Celemek & Barista Pin -->
+    <rect x="38" y="98" width="20" height="18" rx="2" fill="#B59372" stroke="#110B08" stroke-width="1.8"/>
+    <line x1="44" y1="92" x2="44" y2="102" stroke="#A34A22" stroke-width="2.5"/>
+
+    <!-- Tangan Kiri Menunjuk/Menyambut ke Meja Kasir -->
+    <path d="M 28 68 Q 12 85 18 108 L 28 106 Q 24 88 36 72 Z" fill="#3D2619" stroke="#110B08" stroke-width="2.2"/>
+    <circle cx="22" cy="112" r="6" fill="#E2AC95" stroke="#110B08" stroke-width="1.8"/>
+
+    <!-- Tangan Kanan Melambai Alami Menyambut Pelanggan (Sudut Natural & Lengan Bertekuk) -->
+    <path d="M 68 68 Q 85 58 78 40 L 68 44 Q 72 60 60 72 Z" fill="#3D2619" stroke="#110B08" stroke-width="2.2"/>
+    <!-- Telapak Tangan Menyapa ("Monggo, Kawan!") -->
+    <g transform="translate(74, 30)">
+      <circle cx="8" cy="8" r="7" fill="#E2AC95" stroke="#110B08" stroke-width="1.8"/>
+      <line x1="5" y1="3" x2="5" y2="8" stroke="#110B08" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="8" y1="1" x2="8" y2="8" stroke="#110B08" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="11" y1="3" x2="11" y2="8" stroke="#110B08" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+
+    <!-- Leher & Kepala Barista -->
+    <rect x="38" y="44" width="16" height="20" fill="#E2AC95" stroke="#110B08" stroke-width="2"/>
+    <ellipse cx="46" cy="32" rx="16" ry="18" fill="#E2AC95" stroke="#110B08" stroke-width="2.5"/>
+
+    <!-- Rambut Kuncir Ekor Kuda Rapi & Bando Terakota -->
+    <path d="M 30 26 Q 34 10 46 10 Q 62 10 60 26 Q 58 36 56 46 L 50 44 Q 52 36 52 26 Q 44 18 34 26 Z" fill="#1C1512"/>
+    <!-- Bando / Karet Rambut Terakota -->
+    <path d="M 34 18 Q 46 12 58 18" fill="none" stroke="#A34A22" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Kunciran Ekor Kuda di Belakang Kepala -->
+    <path d="M 58 22 Q 72 26 70 42 Q 65 44 60 38 Q 62 30 56 26 Z" fill="#1C1512"/>
+
+    <!-- Dua Mata Bahagia Tersenyum Lebar (^ ^) -->
+    <path d="M 38 28 Q 42 23 46 28" fill="none" stroke="#110B08" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 50 28 Q 54 23 58 28" fill="none" stroke="#110B08" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Senyum Manis Menyambut -->
+    <path d="M 42 36 Q 48 42 54 36" fill="none" stroke="#A34A22" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Rona Pipi Manis di Kedua Pipi -->
+    <circle cx="36" cy="33" r="3.5" fill="#EAA897" opacity="0.75"/>
+    <circle cx="58" cy="33" r="3.5" fill="#EAA897" opacity="0.75"/>
+  </g>
+
+</svg>
+

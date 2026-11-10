@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Katalog menu lengkap dan kasir mandiri Kopi Senja Surabaya — Nikmati seduhan kopi susu aren, cloud pandan, matcha latte, dan toast kaya butter dengan struk otomatis dan timer barista.">
+
+    <title>Kopi Senja — Katalog Menu &amp; Kasir</title>
+
+    <!-- Favicon Kopi Senja -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- Google Fonts: Permanent Marker (Judul) & Courier Prime (Mesin Tik) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CDN (Slide 6 Rubrik UTS) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- CSS Eksternal Terpadu (Sesuai Struktur UTS: css/style.css) -->
+    <link rel="stylesheet" href="css/style.css?v=smooth">
+    <link rel="stylesheet" href="style.css?v=smooth">
+</head>
+
+<body>
+
+    <!-- Skip-Link untuk Aksesibilitas Keyboard (Slide 4 Rubrik UTS) -->
+    <a href="#main" class="skip-link">Lewati ke konten utama</a>
+
+    <!-- Header & Navigasi Editorial Kopi Senja -->
+    <header class="header-lebar">
+        <div class="header-brand">
+            <a href="index.html" class="brand-title">
+                ☕ Kopi Senja
+            </a>
+            <span class="brand-est">Ruang Singgah di Surabaya · Est. 2023</span>
+        </div>
+
+        <div class="nav-wrap">
+            <nav>
+                <a href="index.html">Beranda</a>
+                <a href="menu.html" aria-current="page">Katalog Menu</a>
+                <a href="tentang.html">Tentang Kami</a>
+                <a href="kontak.html">Lokasi &amp; Kontak</a>
+            </nav>
+            <div class="lang-switch" title="Pilihan Bahasa">
+                <strong class="lang-active">ID</strong> | <span class="lang-inactive">EN</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Konten Utama Katalog & Kasir Mandiri -->
+    <main class="halaman-menu" id="main">
+        <h1>Katalog Menu Kopi Senja</h1>
+
+        <p class="lead">
+            Pilihan seduhan kopi nusantara, kreasi minuman segar, dan kudapan panggang hangat untuk menemani ceritamu di Surabaya.
+        </p>
+
+                <!-- BANNER HERO MULTI-LAYER INTERAKTIF GAYA TUKU (3 LAYER FOTO + KARAKTER + MEJA) -->
+        <figure class="hero-berlapis">
+            <div class="hero-panggung" role="img" aria-label="Ilustrasi barista Kopi Senja melambai ramah di balik konter kedai, lengkap dengan mesin espresso, etalase kue, dan papan menu.">
+                <!-- Lapisan 1: Foto Latar Belakang Kedai (DIAM) -->
+                <img src="images/hero/background.webp?v=normal" alt="Latar Belakang Kedai Kopi Senja" class="parallax-bg hero-layer">
+                <div class="hero-overlay-gelap" aria-hidden="true"></div>
+
+                <!-- Lapisan 2: Karakter Barista Interaktif Berjalan Mengikuti Kursor di Balik Meja -->
+                <div class="barista-interaktif" id="baristaKarakterMenu" tabindex="0" role="button" aria-label="Karakter barista Kopi Senja menyapa">
+                    <img src="images/hero/barista-karakter.png?v=normal" alt="Barista Kopi Senja Ramah Menyapa" class="barista-avatar">
+                    <div class="barista-speech-bubble" id="baristaBalonMenu" aria-hidden="true">
+                        Mau pesan apa hari ini? ☕
+                    </div>
+                </div>
+
+                <!-- Lapisan 3: Meja Bar Depan & Mesin Espresso (DIAM & Z-Index di Depan Barista) -->
+                <img src="images/hero/meja.png?v=normal" alt="Meja Bar dan Mesin Espresso" class="parallax-fg hero-layer" aria-hidden="true">
+
+                <!-- Coretan Kapur & Petunjuk Halus Gaya Tuku (DIAM) -->
+                <div class="tuku-chalk chalk-espresso" aria-hidden="true">
+                    <span>Mesin Seduh Senja ↗</span>
+                </div>
+                <div class="tuku-chalk chalk-kudapan" aria-hidden="true">
+                    <span>↖ Toast &amp; Kudapan</span>
+                </div>
+            </div>
+            <figcaption class="caption-senja">Meja seduh &amp; etalase kasir Kopi Senja Surabaya &mdash; gerakkan kursor mouse ke kiri dan kanan untuk melihat barista berjalan dan menyapa dari balik meja seduh.</figcaption>
+        </figure>
+
+        <div class="menu-catatan">
+            💡 <strong>Kasir Mandiri Kopi Senja:</strong> Klik tombol <strong>&ldquo;+ Pesan&rdquo;</strong> pada menu favoritmu untuk langsung menambahkannya ke keranjang pesanan di bagian bawah halaman. Kamu bisa mencetak struk digital dan melihat estimasi waktu racikan barista secara langsung!
+        </div>
+
+        <!-- ============================================== -->
+        <!-- LAYOUT UTAMA: SIDEBAR KATEGORI + GRID PRODUK   -->
+        <!-- ============================================== -->
+        <div class="menu-layout">
+
+            <!-- SIDEBAR FILTER KATEGORI -->
+            <aside class="menu-sidebar" aria-label="Filter Kategori Menu">
+                <span class="menu-sidebar-title">Kategori Menu</span>
+                <ul class="filter-list">
+                    <li>
+                        <button type="button" class="filter-btn aktif" data-filter="semua" aria-pressed="true">
+                            <span>Semua Menu</span>
+                            <span class="kategori-count">14</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="filter-btn" data-filter="promo" aria-pressed="false">
+                            <span>🔥 Paket Promo</span>
+                            <span class="kategori-count">3</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="filter-btn" data-filter="signature" aria-pressed="false">
+                            <span>⭐ Senja Signature</span>
+                            <span class="kategori-count">3</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="filter-btn" data-filter="klasik" aria-pressed="false">
+                            <span>☕ Espresso Klasik</span>
+                            <span class="kategori-count">3</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="filter-btn" data-filter="non-kopi" aria-pressed="false">
+                            <span>🍵 Non-Kopi &amp; Teh</span>
+                            <span class="kategori-count">3</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="filter-btn" data-filter="toast" aria-pressed="false">
+                            <span>🍞 Toast &amp; Kudapan</span>
+                            <span class="kategori-count">2</span>
+                        </button>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- GRID KATALOG PRODUK -->
+            <section class="menu-katalog" aria-live="polite">
+                <!-- Kotak Rekomendasi Barista Dinamis -->
+                <div class="box-rekomendasi" id="boxRekomendasi">
+                    <span class="rekomendasi-icon" id="rekomendasiIcon">☕✨</span>
+                    <div class="rekomendasi-teks">
+                        <strong id="rekomendasiJudul">Semua Seduhan &amp; Kudapan Kopi Senja</strong>
+                        <p id="rekomendasiIsi">Jelajahi seluruh 14 menu pilihan kami. Klik tombol <strong>+ Pesan</strong> pada kartu mana pun untuk langsung memasukkannya ke kasir mandiri!</p>
+                    </div>
+                </div>
+
+                <div class="menu-grid" id="menuGrid">
+
+                    <!-- ITEM 1 -->
+                    <article class="menu-card" data-kategori="promo">
+                        <div class="menu-card-img-wrap">
+                            <img src="images/promo-buy2.jpg" alt="Buy 2 Disc 25%" class="menu-card-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-body">
+                            <span class="menu-badge badge-promo">Promo Delivery</span>
+                            <h2 class="menu-card-title">Buy 2 Disc 25%</h2>
+                            <p class="menu-card-desc">
+                                Nikmati diskon 25% untuk pembelian 2 Kopi Susu Senja Aren dingin ukuran reguler (2 × Rp 20.000 diskon 25%). Lebih hemat dinikmati bersama!
+                            </p>
+                            <div class="menu-card-footer">
+                                <div>
+                                    <span class="menu-card-price-label">Mulai dari</span>
+                                    <span class="menu-card-price">Rp 30.000</span>
+                                </div>
+                                <button type="button" class="btn-tambah" data-nama="Buy 2 Disc 25%" data-harga="30000">+ Pesan</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 2 -->
+                    <article class="menu-card" data-kategori="promo">
+                        <div class="menu-card-img-wrap">
+                            <img src="images/promo-duo.jpg" alt="2 Kopi Senja Hanya 29RBan" class="menu-card-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-body">
+                            <span class="menu-badge badge-promo">Promo Spesial</span>
+                            <h2 class="menu-card-title">2 Kopi Senja Hanya 29RBan</h2>
+                            <p class="menu-card-desc">
+                                Paket hemat berdua: 2 gelas Kopi Susu Gula Aren dingin racikan khas Kopi Senja tanpa syarat rumit.
+                            </p>
+                            <div class="menu-card-footer">
+                                <div>
+                                    <span class="menu-card-price-label">Mulai dari</span>
+                                    <span class="menu-card-price">Rp 29.500</span>
+                                </div>
+                                <button type="button" class="btn-tambah" data-nama="2 Kopi Senja Hanya 29RBan" data-harga="29500">+ Pesan</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 3 -->
+                    <article class="menu-card" data-kategori="promo">
+                        <div class="menu-card-img-wrap">
+                            <img src="images/promo-trio.jpg" alt="Beli 2 Gratis 1 Americano" class="menu-card-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-body">
+                            <span class="menu-badge badge-promo">Paket Bertiga</span>
+                            <h2 class="menu-card-title">Beli 2 Gratis 1 Americano</h2>
+                            <p class="menu-card-desc">
+                                Beli 2 Kopi Susu Senja Aren, langsung dapatkan 1 Iced Americano segar gratis untuk temani tugasmu.
+                            </p>
+                            <div class="menu-card-footer">
+                                <div>
+                                    <span class="menu-card-price-label">Mulai dari</span>
+                                    <span class="menu-card-price">Rp 40.000</span>
+                                </div>
+                                <button type="button" class="btn-tambah" data-nama="Beli 2 Gratis 1 Americano" data-harga="40000">+ Pesan</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 4 -->
+                    <article class="menu-card" data-kategori="signature">
+                        <div class="menu-card-img-wrap">
+                            <img src="images/kopi-susu-aren.jpg" alt="Kopi Susu Senja Aren" class="menu-card-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-body">
+                            <span class="menu-badge badge-signature">Signature</span>
+                            <h2 class="menu-card-title">Kopi Susu Senja Aren</h2>
+                            <p class="menu-card-desc">
+                                Paduan espresso house blend dengan gula aren murni dan susu segar creamy yang pas di lidah.
+                            </p>
+                            <div class="menu-card-footer">
+                                <div>
+                                    <span class="menu-card-price-label">Mulai dari</span>
+                                    <span class="menu-card-price">Rp 20.000</span>
+                                </div>
+                                <button type="button" class="btn-tambah" data-nama="Kopi Susu Senja Aren" data-harga="20000">+ Pesan</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 5 -->
+                    <article class="menu-card" data-kategori="signature">
+                        <div class="menu-card-img-wrap">
+                            <img src="images/cloud-pandan.jpg" alt="Senja Cloud Pandan" class="menu-card-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-body">
+                            <span class="menu-badge badge-signature">Favorit</span>
+                            <h2 class="menu-card-title">Senja Cloud Pandan</h2>
+                            <p class="menu-card-desc">
+                                Sentuhan aroma pandan wangi alami berpadu dengan espresso bold dan lapisan cold foam lembut.
+                            </p>
+                            <div class="menu-card-footer">
+                                <div>
+                                    <span class="menu-card-price-label">Mulai dari</span>
+                                    <span class="menu-card-price">Rp 24.000</span>
+                                </div>
+                                <button type="button" class="btn-tambah" data-nama="Senja Cloud Pandan" data-harga="24000">+ Pesan</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 6 -->
+                    <article class="menu-card" data-kategori="signature">
+                        <div class="menu-card-img-wrap">
+                            <img src="images/cold-brew-citrus.jpg" alt="Senja Cold Brew Citrus" class="menu-card-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-body">
+                            <span class="menu-badge badge-signature">Baru!</span>
+                            <h2 class="menu-card-title">Senja Cold Brew Citrus</h2>
+                            <p class="menu-card-desc">
+                                Kopi seduh dingin 16 jam dengan sentuhan perasan jeruk segar dan madu hutan alami.
+                            </p>
+                            <div class="menu-card-footer">
+                                <div>
+                                    <span class="menu-card-price-label">Mulai dari</span>
+                                    <span class="menu-card-price">Rp 26.000</span>
+                                </div>
+                                <button type="button" class="btn-tambah" data-nama="Senja Cold Brew Citrus" data-harga="26000">+ Pesan</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 7 -->
+                    <article class="menu-card" data-kategori="klasik">
+                        <div class="menu-card-img-wrap">
+                            <img src="images/americano.jpg" alt="Americano Senja" class="menu-card-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-body">
+                            <span class="menu-badge badge-klasik">Klasik</span>
+                            <h2 class="menu-card-title">Americano Senja</h2>
+                            <p class="menu-card-desc">
+                                Double shot espresso murni dipadu air mineral dingin atau panas, kaya crema dan rasa kopi autentik.
+                            </p>
+                            <div class="menu-card-footer">
+                                <div>
+                                    <span class="menu-card-price-label">Mulai dari</span>
+                                    <span class="menu-card-price">Rp 18.000</span>
+                                </div>
+                                <button type="button" class="btn-tambah" data-nama="Americano Senja" data-harga="18000">+ Pesan</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 8 -->
+                    <article class="menu-card" data-kategori="klasik">
+                        <div class="menu-card-img-wrap">
+                            <img src="images/caffe-latte.jpg" alt="Caffe Latte" class="menu-card-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-body">
+                            <span class="menu-badge badge-klasik">Klasik</span>
+                            <h2 class="menu-card-title">Caffe Latte</h2>
+                            <p class="menu-card-desc">
+                                Keseimbangan espresso kaya rasa dan susu kukus bertekstur sutra dengan latte art menawan.
+                            </p>
+                            <div class="menu-card-footer">
+                                <div>
+                                    <span class="menu-card-price-label">Mulai dari</span>
+                                    <span class="menu-card-price">Rp 25.000</span>
+                                </div>
+                                <button type="button" class="btn-tambah" data-nama="Caffe Latte" data-harga="25000">+ Pesan</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 9 -->
+                    <article class="menu-card" data-kategori="klasik">
+                        <div class="menu-card-img-wrap">
+                            <img src="images/caramel-macchiato.jpg" alt="Caramel Macchiato" class="menu-card-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-body">
+                            <span class="menu-badge badge-klasik">Favorit</span>
+                            <h2 class="menu-card-title">Caramel Macchiato</h2>
+                            <p class="menu-card-desc">
+                                Susu vanila lembut disiram espresso panggang dan saus karamel lezat di atasnya.
+                            </p>
+                            <div class="menu-card-footer">
+                                <div>
+                                    <span class="menu-card-price-label">Mulai dari</span>
+                                    <span class="menu-card-price">Rp 28.000</span>
+                                </div>
+                                <button type="button" class="btn-tambah" data-nama="Caramel Macchiato" data-harga="28000">+ Pesan</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 10 -->
+                    <article class="menu-card" data-kategori="non-kopi">
+                        <div class="menu-card-img-wrap">
+                            <img src="images/matcha-latte.jpg" alt="Matcha Latte Uji" class="menu-card-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-body">
+                            <span class="menu-badge badge-nonkopi">Best Seller</span>
+                            <h2 class="menu-card-title">Matcha Latte Uji</h2>
+                            <p class="menu-card-desc">
+                                Teh hijau bubuk asli dari Kyoto berpadu dengan susu murni, menghadirkan aroma earthy yang segar.
+                            </p>
+                            <div class="menu-card-footer">
+                                <div>
+                                    <span class="menu-card-price-label">Mulai dari</span>
+                                    <span class="menu-card-price">Rp 25.000</span>
+                                </div>
+                                <button type="button" class="btn-tambah" data-nama="Matcha Latte Uji" data-harga="25000">+ Pesan</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 11 -->
+                    <article class="menu-card" data-kategori="non-kopi">
+                        <div class="menu-card-img-wrap">
+                            <img src="images/belgian-chocolate.jpg" alt="Belgian Chocolate Dark" class="menu-card-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-body">
+                            <span class="menu-badge badge-nonkopi">Favorit</span>
+                            <h2 class="menu-card-title">Belgian Chocolate Dark</h2>
+                            <p class="menu-card-desc">
+                                Olahan kakao Belgia pekat dengan rasa manis seimbang dan tekstur kental yang menenangkan.
+                            </p>
+                            <div class="menu-card-footer">
+                                <div>
+                                    <span class="menu-card-price-label">Mulai dari</span>
+                                    <span class="menu-card-price">Rp 23.000</span>
+                                </div>
+                                <button type="button" class="btn-tambah" data-nama="Belgian Chocolate Dark" data-harga="23000">+ Pesan</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 12 -->
+                    <article class="menu-card" data-kategori="non-kopi">
+                        <div class="menu-card-img-wrap">
+                            <img src="images/lemon-tea.jpg" alt="Earl Grey Lemon Tea" class="menu-card-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-body">
+                            <span class="menu-badge badge-nonkopi">Segar</span>
+                            <h2 class="menu-card-title">Earl Grey Lemon Tea</h2>
+                            <p class="menu-card-desc">
+                                Teh beraroma bergamot khas Inggris dipadukan perasan jeruk lemon segar, sempurna melepas dahaga.
+                            </p>
+                            <div class="menu-card-footer">
+                                <div>
+                                    <span class="menu-card-price-label">Mulai dari</span>
+                                    <span class="menu-card-price">Rp 18.000</span>
+                                </div>
+                                <button type="button" class="btn-tambah" data-nama="Earl Grey Lemon Tea" data-harga="18000">+ Pesan</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 13 -->
+                    <article class="menu-card" data-kategori="toast">
+                        <div class="menu-card-img-wrap">
+                            <img src="images/toast-kaya.jpg" alt="Roti Toast Senja Kaya Butter" class="menu-card-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-body">
+                            <span class="menu-badge badge-toast">Toast Hangat</span>
+                            <h2 class="menu-card-title">Roti Toast Kaya Butter</h2>
+                            <p class="menu-card-desc">
+                                Roti tebal dipanggang renyah di luar lembut di dalam, dilapisi selai srikaya wangi dan lelehan butter asin.
+                            </p>
+                            <div class="menu-card-footer">
+                                <div>
+                                    <span class="menu-card-price-label">Mulai dari</span>
+                                    <span class="menu-card-price">Rp 20.000</span>
+                                </div>
+                                <button type="button" class="btn-tambah" data-nama="Roti Toast Kaya Butter" data-harga="20000">+ Pesan</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 14 -->
+                    <article class="menu-card" data-kategori="toast">
+                        <div class="menu-card-img-wrap">
+                            <img src="images/croissant.jpg" alt="Artisan Butter Croissant" class="menu-card-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-body">
+                            <span class="menu-badge badge-toast">Fresh Bake</span>
+                            <h2 class="menu-card-title">Artisan Butter Croissant</h2>
+                            <p class="menu-card-desc">
+                                Croissant renyah berlapis dengan mentega murni Prancis, harum dan berongga sempurna.
+                            </p>
+                            <div class="menu-card-footer">
+                                <div>
+                                    <span class="menu-card-price-label">Mulai dari</span>
+                                    <span class="menu-card-price">Rp 22.000</span>
+                                </div>
+                                <button type="button" class="btn-tambah" data-nama="Artisan Butter Croissant" data-harga="22000">+ Pesan</button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================== -->
+        <!-- AREA PESANAN & TOTAL HARGA (KASIR MANDIRI)     -->
+        <!-- ============================================== -->
+        <div id="kasirMandiri"></div>
+        <section class="area-pesanan" id="areaPesanan">
+            <div class="pesanan-header">
+                <h2>📋 Pesanan Saya (Kasir Mandiri)</h2>
+                <p>Klik tombol <strong>+ Pesan</strong> pada kartu menu di atas, atau masukkan menu pilihanmu secara manual di bawah.</p>
+            </div>
+
+            <!-- Form Input Mandiri Customer -->
+            <div class="input-mandiri-box">
+                <h3>Tambah Menu Sendiri</h3>
+                <div class="input-mandiri-grid">
+                    <div>
+                        <label for="pilihMenuManual">Pilih / Nama Menu:</label>
+                        <select id="pilihMenuManual">
+                            <option value="">-- Pilih dari Daftar Menu --</option>
+                            <option value="Buy 2 Disc 25%|30000">Buy 2 Disc 25% (Rp 30.000)</option>
+                            <option value="2 Kopi Senja Hanya 29RBan|29500">2 Kopi Senja Hanya 29RBan (Rp 29.500)</option>
+                            <option value="Beli 2 Gratis 1 Americano|40000">Beli 2 Gratis 1 Americano (Rp 40.000)</option>
+                            <option value="Kopi Susu Senja Aren|20000">Kopi Susu Senja Aren (Rp 20.000)</option>
+                            <option value="Senja Cloud Pandan|24000">Senja Cloud Pandan (Rp 24.000)</option>
+                            <option value="Senja Cold Brew Citrus|26000">Senja Cold Brew Citrus (Rp 26.000)</option>
+                            <option value="Americano Senja|18000">Americano Senja (Rp 18.000)</option>
+                            <option value="Caffe Latte|25000">Caffe Latte (Rp 25.000)</option>
+                            <option value="Caramel Macchiato|28000">Caramel Macchiato (Rp 28.000)</option>
+                            <option value="Matcha Latte Uji|25000">Matcha Latte Uji (Rp 25.000)</option>
+                            <option value="Belgian Chocolate Dark|23000">Belgian Chocolate Dark (Rp 23.000)</option>
+                            <option value="Earl Grey Lemon Tea|18000">Earl Grey Lemon Tea (Rp 18.000)</option>
+                            <option value="Roti Toast Kaya Butter|20000">Roti Toast Kaya Butter (Rp 20.000)</option>
+                            <option value="Artisan Butter Croissant|22000">Artisan Butter Croissant (Rp 22.000)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="qtyManual">Jumlah (Qty):</label>
+                        <input type="number" id="qtyManual" min="1" max="50" value="1">
+                    </div>
+
+                    <div>
+                        <button type="button" class="tombol btn-tambah-manual" id="btnTambahManual">+ Tambah</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabel Daftar Pesanan Aktif -->
+            <div class="tabel-pesanan-wrap">
+                <table class="tabel-pesanan" id="tabelPesanan">
+                    <thead>
+                        <tr>
+                            <th>Menu</th>
+                            <th class="col-harga">Harga Satuan</th>
+                            <th class="text-center">Jumlah</th>
+                            <th class="col-subtotal">Subtotal</th>
+                            <th class="text-center">Hapus</th>
+                        </tr>
+                    </thead>
+                    <tbody id="badanTabelPesanan">
+                        <!-- Diisi secara dinamis oleh JavaScript -->
+                        <tr id="barisKosong">
+                            <td colspan="5" class="pesanan-kosong">
+                                Belum ada menu yang dipilih. Klik tombol <strong>+ Pesan</strong> pada kartu menu di atas!
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Form Data Customer -->
+            <div class="form-pelanggan-grid">
+                <div>
+                    <label for="namaCustomer">Nama Pelanggan:</label>
+                    <input type="text" id="namaCustomer" placeholder="Contoh: Budi Santoso" required>
+                </div>
+                <div>
+                    <label for="nomorMeja">Nomor Meja / Layanan:</label>
+                    <select id="nomorMeja">
+                        <option value="Meja 01">Meja 01 (Dine-in)</option>
+                        <option value="Meja 02">Meja 02 (Dine-in)</option>
+                        <option value="Meja 03">Meja 03 (Dine-in)</option>
+                        <option value="Meja 04">Meja 04 (Dine-in)</option>
+                        <option value="Meja 05">Meja 05 (Dine-in)</option>
+                        <option value="Takeaway / Bungkus">Takeaway (Bawa Pulang)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label for="catatanCustomer">Catatan Khusus (Opsional):</label>
+                <input type="text" id="catatanCustomer" placeholder="Contoh: Kurang manis (less sugar), es sedikit, dll.">
+            </div>
+
+            <!-- Pilihan Metode Pembayaran (QRIS, Tunai, Debit) -->
+            <div class="metode-bayar-section">
+                <span class="metode-bayar-label">Pilih Metode Pembayaran:</span>
+                <div class="metode-bayar-group">
+                    <label class="metode-chip aktif" data-metode="QRIS">
+                        <input type="radio" name="metodeBayar" value="QRIS" checked>
+                        <div>
+                            <span class="metode-info">📱 QRIS / QR Pay</span>
+                            <span class="metode-sub">BCA, GoPay, OVO, Dana, Shopee</span>
+                        </div>
+                    </label>
+
+                    <label class="metode-chip" data-metode="Tunai">
+                        <input type="radio" name="metodeBayar" value="Tunai">
+                        <div>
+                            <span class="metode-info">💵 Tunai / Cash</span>
+                            <span class="metode-sub">Bayar langsung di meja kasir</span>
+                        </div>
+                    </label>
+
+                    <label class="metode-chip" data-metode="Debit">
+                        <input type="radio" name="metodeBayar" value="Kartu Debit">
+                        <div>
+                            <span class="metode-info">💳 Kartu Debit / EDC</span>
+                            <span class="metode-sub">BCA, Mandiri, BRI, BNI</span>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- Preview Petunjuk Bayar Interaktif -->
+                <div class="preview-bayar-box" id="previewBayarBox">
+                    <span class="preview-bayar-icon" id="previewBayarIcon">📱</span>
+                    <div class="preview-bayar-info">
+                        <strong id="previewBayarJudul">Pembayaran Instan QRIS</strong>
+                        <p id="previewBayarPesan">Scan kode QRIS yang tersedia di layar kasir menggunakan aplikasi GoPay, OVO, Dana, BCA Mobile, ShopeePay, atau m-Banking Anda.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kotak Total Bayar -->
+            <div class="kotak-total">
+                <div>
+                    <span class="total-label">Total yang Harus Dibayar:</span>
+                    <p class="text-muted">
+                        *Sudah termasuk pajak restoran &amp; pelayanan
+                    </p>
+                </div>
+                <div class="total-nominal" id="displayTotalBayar">Rp 0</div>
+            </div>
+
+            <!-- Tombol Konfirmasi Pesanan -->
+            <button type="button" class="tombol btn-proses-pesanan" id="btnProsesPesanan">
+                Konfirmasi &amp; Selesaikan Pesanan
+            </button>
+        </section>
+
+    </main>
+
+    <!-- Tombol Melayang Keranjang / Total (Floating Cart) -->
+    <a href="#areaPesanan" class="floating-cart" id="floatingCart">
+        <span>🛒</span>
+        <span class="floating-badge" id="badgeTotalItem">0 Item</span>
+        <span id="badgeTotalNominal">Rp 0</span>
+    </a>
+
+    <!-- Modal Digital Receipt (Struk Pembayaran) -->
+    <div class="modal-backdrop" id="modalStrukBackdrop">
+        <div class="modal-struk">
+            <div class="struk-header">
+                <h3>KOPI SENJA</h3>
+                <p>Jl. Dharmawangsa No. 24, Gubeng, Surabaya</p>
+                <p class="struk-tgl-text" id="strukTanggalJam">06 Nov 2026</p>
+            </div>
+
+            <div class="struk-info">
+                <div class="struk-info-row">
+                    <span>No. Pesanan:</span>
+                    <strong id="strukNoPesanan">#KS-8821</strong>
+                </div>
+                <div class="struk-info-row">
+                    <span>Pelanggan:</span>
+                    <strong id="strukNama">Budi</strong>
+                </div>
+                <div class="struk-info-row">
+                    <span>Meja / Layanan:</span>
+                    <span id="strukMeja">Meja 01</span>
+                </div>
+                <div class="struk-info-row struk-catatan-row" id="strukCatatanRow">
+                    <span>Catatan:</span>
+                    <span id="strukCatatan" class="struk-catatan-text">-</span>
+                </div>
+            </div>
+
+            <table class="struk-items" id="strukTableItems">
+                <!-- Diisi via JS -->
+            </table>
+
+            <div class="struk-total-row">
+                <span>TOTAL BAYAR:</span>
+                <span id="strukTotalBayar">Rp 0</span>
+            </div>
+
+            <div class="struk-metode-box">
+                Metode Pembayaran: <strong id="strukMetode">QRIS</strong>
+                <div id="strukInstruksi" class="struk-instruksi-box">
+                    Silakan scan QRIS di meja kasir.
+                </div>
+                <div id="strukQrBox" class="struk-qr-box">
+                    <!-- Dinamis via JS -->
+                </div>
+            </div>
+
+            <div class="struk-aksi">
+                <button type="button" class="tombol" onclick="window.print()">🖨️ Cetak Struk</button>
+                <button type="button" class="tombol btn-tutup-modal-dark" id="btnTutupModal">Selesai &amp; Proses Pesanan</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifikasi Simulasi Pesanan (8 - 10 Detik) -->
+    <div class="notif-pesanan-box" id="notifPesananBox" role="alert" aria-live="assertive">
+        <div class="notif-head">
+            <span class="notif-icon" id="notifIcon">⏳</span>
+            <div>
+                <h4 class="notif-judul" id="notifJudul">Barista Sedang Meracik...</h4>
+            </div>
+        </div>
+        <p class="notif-pesan" id="notifPesan">
+            Pesananmu sedang disiapkan dengan cermat oleh barista Kopi Senja.
+        </p>
+        <div class="notif-progress-wrap" id="notifProgressWrap">
+            <div class="notif-progress-bar" id="notifProgressBar"></div>
+        </div>
+        <div class="notif-timer-text" id="notifTimerText">
+            <span>Estimasi siap:</span>
+            <strong id="notifCountdown">10 detik</strong>
+        </div>
+        <button type="button" class="btn-notif-tutup" id="btnTutupNotif">
+            ✅ Oke, Ambil Pesanan di Kasir
+        </button>
+    </div>
+
+    <!-- Footer Lengkap & Proporsional -->
+    <footer class="footer-lebar">
+        <div class="footer-container">
+            <!-- Kolom 1: Merek & Profil -->
+            <div class="footer-col">
+                <h4>☕ Kopi Senja Surabaya</h4>
+                <p>
+                    Lahir dari kehangatan seduhan, bertumbuh bersama Kawan Senja. Ruang singgah sederhana untuk berbagi cerita di ujung hari.
+                </p>
+                <div class="footer-badge-kota">
+                    📍 Surabaya, Jawa Timur · Indonesia
+                </div>
+            </div>
+
+            <!-- Kolom 2: Tautan Halaman -->
+            <div class="footer-col">
+                <h4>Tautan Halaman</h4>
+                <ul>
+                    <li><a href="index.html">Beranda Utama</a></li>
+                    <li><a href="menu.html">Katalog Menu &amp; Kasir</a></li>
+                    <li><a href="tentang.html">Tentang &amp; Semesta Senja</a></li>
+                    <li><a href="kontak.html">Lokasi &amp; Kontak</a></li>
+                    <li><a href="demo-css.html">Demo Metode CSS</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Waktu Operasional -->
+            <div class="footer-col">
+                <h4>Waktu Operasional</h4>
+                <div class="jadwal-box">
+                    <div class="jadwal-item">
+                        <span class="jadwal-hari">Senin – Jumat</span>
+                        <span class="jadwal-jam">09.00 – 22.00 WIB</span>
+                    </div>
+                    <div class="jadwal-item">
+                        <span class="jadwal-hari">Sabtu – Minggu</span>
+                        <span class="jadwal-jam">08.00 – 22.30 WIB</span>
+                    </div>
+                </div>
+                <p class="footer-layanan-info">
+                    Menerima pesanan mandiri di tempat (Dine-in) dan bawa pulang (Take-away).
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 Kopi Senja Surabaya. Semua hak dilindungi.</span>
+            <span class="footer-bottom-senja">Dirancang dengan cinta untuk Kawan Senja.</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 Bundle JS CDN (Slide 6 Rubrik UTS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- JavaScript Terpadu -->
+    <script src="script.js?v=smooth"></script>
+
+</body>
+
+</html>

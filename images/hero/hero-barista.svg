@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice"><defs></defs><!-- tubuh -->
+<path d="M410 640 L425 430 Q430 385 490 372 L630 372 Q690 385 695 430 L710 640Z" fill="#3A322D" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- lengan kanan (melambai) -->
+<path d="M670 400 Q750 380 775 290" fill="none" stroke="#221C18" stroke-width="46" stroke-linecap="round"/>
+<path d="M670 400 Q750 380 775 290" fill="none" stroke="#3A322D" stroke-width="40" stroke-linecap="round"/>
+<g stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#F2C9A5"><path d="M750 300 Q750 250 765 240 Q774 236 776 250 L782 232 Q792 226 796 240 L796 256 L808 240 Q818 236 820 248 Q822 270 810 300 Q792 322 770 318Z"/></g>
+<!-- celemek -->
+<path d="M490 372 L476 640 L644 640 L630 372 Q560 392 490 372Z" fill="#8B6B4E" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M490 372 Q508 340 530 330 M630 372 Q612 340 590 330" fill="none" stroke="#221C18" stroke-width="7" stroke-linecap="round"/>
+<path d="M512 440 L608 440 L602 500 Q560 520 518 500Z" fill="#7B5C40" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="560" cy="468" r="15" fill="#D47720" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M534 482 L586 482 M540 492 L580 492" stroke="#221C18" stroke-width="3" stroke-linecap="round"/>
+<!-- lengan kiri memegang gelas -->
+<path d="M448 410 Q385 440 388 410" fill="none" stroke="#221C18" stroke-width="46" stroke-linecap="round"/>
+<path d="M448 410 Q385 440 388 410" fill="none" stroke="#3A322D" stroke-width="40" stroke-linecap="round"/>
+<!-- gelas --><g transform="translate(0,-62)">
+<path d="M322 395 L426 395 L412 495 Q374 505 336 495Z" fill="#FFFDF9" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M318 380 Q374 368 430 380 L428 398 L320 398Z" fill="#6B4A32" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M328 432 L418 432 L414 462 L332 462Z" fill="#C45A1A" opacity=".92"/>
+<text x="374" y="452" font-size="13" text-anchor="middle" fill="#FFFDF9" font-family="Permanent Marker,cursive">KOPI SENJA</text>
+<ellipse cx="392" cy="488" rx="0" ry="0"/>
+<path d="M412 480 q-8 -24 8 -34 q10 26 -8 34" fill="#F2C9A5" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M412 452 q16 6 14 22" fill="#F2C9A5" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g><!-- leher & kepala -->
+<rect x="534" y="330" width="52" height="48" rx="14" fill="#F2C9A5" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M468 240 Q464 130 560 118 Q656 130 652 240 Q648 330 560 336 Q472 330 468 240Z" fill="#F2C9A5" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M452 270 Q430 120 560 100 Q690 120 668 270 Q664 300 656 304 Q658 190 620 172 Q570 200 490 176 Q470 200 464 304 Q452 296 452 270Z" fill="#221C18" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="510" cy="262" rx="20" ry="12" fill="#F4A58A" opacity=".8"/><ellipse cx="610" cy="262" rx="20" ry="12" fill="#F4A58A" opacity=".8"/>
+<ellipse cx="524" cy="236" rx="7" ry="11" fill="#221C18"/><ellipse cx="596" cy="236" rx="7" ry="11" fill="#221C18"/>
+<path d="M508 216 Q524 206 540 214 M580 214 Q596 206 612 216" fill="none" stroke="#221C18" stroke-width="3" stroke-linecap="round"/>
+<path d="M530 276 Q560 312 590 276Z" fill="#FFFDF9" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M556 252 q4 8 9 3" fill="none" stroke="#221C18" stroke-width="2.5" stroke-linecap="round"/>
+<!-- kilau -->
+<path d="M370 284 Q370 300 386 300 Q370 300 370 316 Q370 300 354 300 Q370 300 370 284Z" fill="#FFFDF9" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M730 156 Q730 170 744 170 Q730 170 730 184 Q730 170 716 170 Q730 170 730 156Z" fill="#FFFDF9" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M800 370 Q800 380 810 380 Q800 380 800 390 Q800 380 790 380 Q800 380 800 370Z" fill="#FFFDF9" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<g stroke="#221C18" stroke-width="3" stroke-linecap="round"><path d="M680 120 l-30 20 M695 160 l-38 8 M710 205 l-30 -14"/></g></svg>

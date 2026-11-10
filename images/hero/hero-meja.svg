@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice"><defs></defs><!-- mesin espresso --><g transform="translate(-60,62) scale(.85)">
+<rect x="90" y="360" width="340" height="30" rx="6" fill="#DDE0E3" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="105" y="390" width="310" height="110" rx="8" fill="#C9CDD2" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="130" y="410" width="90" height="38" rx="5" fill="#F4EFE6" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="175" y="435" font-size="15" text-anchor="middle" fill="#C45A1A" font-family="Permanent Marker,cursive">SENJA</text>
+<circle cx="270" cy="428" r="14" fill="#F4EFE6" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="318" cy="428" r="14" fill="#F4EFE6" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M150 360 Q150 330 175 330 L355 330 Q380 330 380 360Z" fill="#E7C9A0" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<g fill="#F4EFE6" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M160 358 L186 358 L182 332 L164 332Z"/><path d="M198 358 L224 358 L220 332 L202 332Z"/><path d="M236 358 L262 358 L258 332 L240 332Z"/></g>
+<rect x="180" y="470" width="70" height="30" rx="4" fill="#DDE0E3" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<!-- papan konter -->
+<rect x="0" y="470" width="1200" height="50" fill="#B07A45" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<g stroke="#8C5A32" stroke-width="2" opacity=".7"><line x1="0" y1="494" x2="1200" y2="494"/><line x1="200" y1="470" x2="200" y2="494"/><line x1="560" y1="494" x2="560" y2="520"/><line x1="930" y1="470" x2="930" y2="494"/></g>
+<rect x="0" y="520" width="1200" height="120" fill="#8C5A32" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<g stroke="#6E4524" stroke-width="3"><line x1="0" y1="520" x2="0" y2="640"/><line x1="100" y1="520" x2="100" y2="640"/><line x1="200" y1="520" x2="200" y2="640"/><line x1="300" y1="520" x2="300" y2="640"/><line x1="400" y1="520" x2="400" y2="640"/><line x1="500" y1="520" x2="500" y2="640"/><line x1="600" y1="520" x2="600" y2="640"/><line x1="700" y1="520" x2="700" y2="640"/><line x1="800" y1="520" x2="800" y2="640"/><line x1="900" y1="520" x2="900" y2="640"/><line x1="1000" y1="520" x2="1000" y2="640"/><line x1="1100" y1="520" x2="1100" y2="640"/><line x1="1200" y1="520" x2="1200" y2="640"/></g>
+<!-- doodle matahari di konter -->
+<g fill="none" stroke="#F4C28A" stroke-width="4" stroke-linecap="round" opacity=".85"><circle cx="150" cy="590" r="26"/><path d="M150 546 v-12 M186 560 l10 -8 M114 560 l-10 -8 M198 590 h14 M102 590 h-14"/><path d="M1050 585 q30 -34 60 0"/></g>
+<!-- etalase kue --><g transform="translate(35,30)">
+<rect x="740" y="365" width="300" height="108" rx="6" fill="#DCEFF0" fill-opacity=".55" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="740" y1="420" x2="1040" y2="420" stroke="#221C18" stroke-width="2.5"/>
+<g fill="#E39A3F" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M770 418 Q782 392 806 396 Q830 392 842 418Z"/><path d="M850 418 Q862 392 886 396 Q910 392 922 418Z"/><path d="M930 418 Q942 392 966 396 Q990 392 1002 418Z"/></g>
+<g fill="#C9854A" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="770" y="448" width="70" height="22" rx="5"/><rect x="852" y="448" width="70" height="22" rx="5"/></g><g fill="#A8D5A0" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="962" cy="458" r="12"/><circle cx="992" cy="458" r="12"/></g>
+<rect x="762" y="330" width="260" height="35" rx="8" fill="#DCEFF0" fill-opacity=".6" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M800 330 Q890 296 980 330Z" fill="#F4EFE6" fill-opacity=".8" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1052" y="410" width="60" height="62" rx="6" fill="#2B2622" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="1082" y="438" font-size="13" text-anchor="middle" fill="#F4EFE6" font-family="Courier Prime,monospace">Kopi</text><text x="1082" y="456" font-size="11" text-anchor="middle" fill="#F4C28A" font-family="Courier Prime,monospace">senja</text>
+</g><!-- cangkir di konter -->
+<ellipse cx="660" cy="475" rx="56" ry="10" fill="#FFFDF9" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M630 440 L690 440 L684 472 Q660 482 636 472Z" fill="#FFFDF9" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="660" cy="440" rx="30" ry="7" fill="#4A2F20" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M690 448 q20 2 14 18 q-6 8 -16 4" fill="none" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- tamper -->
+<rect x="540" y="440" width="30" height="34" rx="6" fill="#5A3E28" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="534" y="470" width="42" height="8" rx="3" fill="#C9CDD2" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="1085" cy="578" rx="9" ry="6" transform="rotate(-25 1085 578)" fill="#4A2F20" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="1110" cy="590" rx="9" ry="6" transform="rotate(20 1110 590)" fill="#4A2F20" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="80" cy="590" rx="9" ry="6" transform="rotate(15 80 590)" fill="#4A2F20" stroke="#221C18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
