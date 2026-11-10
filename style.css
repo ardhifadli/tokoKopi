@@ -2731,8 +2731,9 @@ button.btn-tambah.sukses-tambah {
 }
 
 .chalk-espresso {
-    top: 54%;
-    right: 8%;
+    top: 48%;
+    right: clamp(1.2rem, 10vw, 8rem);
+    white-space: nowrap;
 }
 
 /* 6. Mode Aksesibilitas: prefers-reduced-motion */
