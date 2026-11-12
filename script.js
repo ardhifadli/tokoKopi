@@ -742,7 +742,7 @@ function initHeroParallaxTuku() {
         let userSedangInteraksi = false;
         let timerIdle = null;
         let timerPatroli = null;
-        const stasiunPatroli = [22, 33, 44, 35, 25]; // Area kerja: etalase toast (kiri), sapa tamu (tengah), mesin seduh (kanan)
+        const stasiunPatroli = [20, 33, 52, 75, 48, 26]; // Area kerja: etalase toast (kiri), meja bar (tengah), mesin espresso & meja pick-up (kanan)
         let indexPatroli = 0;
         let rafId = null;
         let lastTime = 0;
@@ -752,11 +752,14 @@ function initHeroParallaxTuku() {
         function updateTeksBalon(persen) {
             if (!balonEl) return;
             let teksBaru = '';
-            if (persen < 28) {
+            if (persen < 26) {
                 // Sisi Kiri: Etalase Toast & Kudapan (dekat tanda Pesan Di Sini)
                 teksBaru = 'Toast &amp; Kudapan hangat! &#129360;';
-            } else if (persen > 39) {
-                // Sisi Kanan: Grinder & Mesin Espresso (dekat tanda Ambil Di Sini)
+            } else if (persen > 62) {
+                // Sisi Kanan Ujung: Meja Pick-up & Tanaman
+                teksBaru = 'Pesanan siap di meja pick-up! &#9749;';
+            } else if (persen > 38) {
+                // Tengah Kanan: Grinder & Mesin Espresso
                 teksBaru = 'Sedang meracik Kopi Susu Aren... &#10024;';
             } else {
                 // Tengah: Meja Bar Depan & Menyapa Kawan Senja
@@ -855,8 +858,8 @@ function initHeroParallaxTuku() {
 
             const rect = heroSection.getBoundingClientRect();
             const mousePercent = ((e.clientX - rect.left) / rect.width) * 100;
-            // Batasi gerak barista antara etalase roti (18%) hingga samping grinder (46%) agar tidak terjebak di belakang mesin
-            targetBaristaPersen = Math.max(18, Math.min(46, mousePercent));
+            // Batasi gerak barista: berhenti di samping etalase roti (min 20%) agar tidak tenggelam di balik etalase, dan bisa sampai ujung kanan meja seduh (max 82%)
+            targetBaristaPersen = Math.max(20, Math.min(82, mousePercent));
 
             startLoop();
 
@@ -872,7 +875,7 @@ function initHeroParallaxTuku() {
                 clearTimeout(timerIdle);
                 const rect = heroSection.getBoundingClientRect();
                 const touchPercent = ((e.touches[0].clientX - rect.left) / rect.width) * 100;
-                targetBaristaPersen = Math.max(18, Math.min(46, touchPercent));
+                targetBaristaPersen = Math.max(20, Math.min(82, touchPercent));
                 startLoop();
                 timerIdle = setTimeout(function () {
                     userSedangInteraksi = false;
