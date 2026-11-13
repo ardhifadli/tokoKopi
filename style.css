@@ -57,30 +57,36 @@
     --bs-border-color: rgba(125, 100, 82, 0.28);
 }
 
-/* ===== MODE GELAP / DARK MODE (Slide 5 Rubrik UTS) ===== */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #1A1410;
-        --ink: #F7EFE6;
-        --latte: #CBB4A1;
-        --terra: #D86F2C;
-        --card: #231C16;
-        --card-surface: #2B221B;
-        --dark-espresso: #120D09;
-        --amber-gold: #E58C35;
-        --amber-light: #F4C494;
-        --amber-bg: #32251B;
-        --ruby-promo: #B83A54;
-        --ruby-bg: #381B22;
-        --green-fresh: #4A9369;
-        --green-bg: #1B2D22;
+/* Tema gelap aktif lewat kontrol pengguna; simpan preferensi di localStorage. */
+[data-theme="dark"] {
+    --bg: #1A1410;
+    --ink: #F7EFE6;
+    --latte: #CBB4A1;
+    --terra: #D86F2C;
+    --card: #231C16;
+    --card-surface: #2B221B;
+    --dark-espresso: #120D09;
+    --amber-gold: #E58C35;
+    --amber-light: #F4C494;
+    --amber-bg: #32251B;
+    --ruby-promo: #B83A54;
+    --ruby-bg: #381B22;
+    --green-fresh: #4A9369;
+    --green-bg: #1B2D22;
+    --bs-primary: #D86F2C;
+    --bs-body-bg: #1A1410;
+    --bs-body-color: #F7EFE6;
+    --bs-secondary-color: #CBB4A1;
+    --bs-border-color: rgba(203, 180, 161, 0.25);
+    color-scheme: dark;
+}
 
-        --bs-primary: #D86F2C;
-        --bs-body-bg: #1A1410;
-        --bs-body-color: #F7EFE6;
-        --bs-secondary-color: #CBB4A1;
-        --bs-border-color: rgba(203, 180, 161, 0.25);
-    }
+:root { color-scheme: light; }
+
+/* Blokir semua transisi saat halaman pertama load agar tidak ada glitch tema */
+.no-transition *, .no-transition *::before, .no-transition *::after {
+    transition: none !important;
+    animation: none !important;
 }
 
 /* ===== AKSESIBILITAS: REDUCED MOTION (Slide 5 Rubrik UTS) ===== */
@@ -1758,7 +1764,7 @@ header.header-lebar {
     margin-top: 0.25rem;
 }
 
-/* Nav Wrapper & Language Switcher */
+/* Navigasi dan kontrol tema */
 .nav-wrap {
     display: flex;
     align-items: center;
@@ -1766,29 +1772,59 @@ header.header-lebar {
     flex-wrap: wrap;
 }
 
-.lang-switch {
-    font-size: 0.82rem;
-    color: var(--latte);
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    flex: 0 0 auto;
+    width: 3.4rem;
+    height: 1.9rem;
+    padding: 0;
     border: 1px solid var(--latte);
-    padding: 0.28rem 0.75rem;
     border-radius: 9999px;
-    letter-spacing: 0.05em;
-    background: transparent;
-    user-select: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
+    background: var(--card);
+    cursor: pointer;
+    transition: background-color 180ms ease, border-color 180ms ease;
+}
+/* tema cerah: latar kuning, thumb putih-oranye di kanan */
+.theme-switch[aria-checked="false"] { background: #f2c35b; border-color: #db9e35; }
+.theme-switch[aria-checked="false"] .theme-switch-thumb {
+    left: calc(100% - 1.35rem - 2px);
+    background: #fff8e8;
+    color: #d98220;
 }
 
-.lang-switch .lang-active {
-    color: var(--ink);
-    font-weight: 700;
+/* tema gelap: latar abu gelap, thumb hitam pekat di kiri */
+.theme-switch[aria-checked="true"] { background: #2e2e2e; border-color: #555; }
+.theme-switch[aria-checked="true"] .theme-switch-thumb {
+    left: 2px;
+    background: #111;
+    color: #e8d5b0;     /* ikon bulan warna krem terang agar terlihat di atas thumb hitam */
 }
 
-.lang-switch .lang-inactive {
-    color: var(--latte);
-    opacity: 0.6;
+.theme-switch:focus-visible { outline: 2px solid var(--terra); outline-offset: 3px; }
+.theme-switch-thumb {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    display: grid;
+    place-items: center;
+    width: 1.35rem;
+    height: 1.35rem;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--card);
+    transform: translateY(-50%);
+    transition: left 180ms ease, background-color 180ms ease, color 180ms ease;
 }
+.theme-switch-thumb svg { display: block; }
+
+::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+::view-transition-new(root) { z-index: 9999; animation: theme-reveal 650ms ease-out both; }
+@keyframes theme-reveal {
+    from { clip-path: circle(0 at var(--theme-x, 50vw) var(--theme-y, 50vh)); }
+    to { clip-path: circle(var(--theme-radius, 150vmax) at var(--theme-x, 50vw) var(--theme-y, 50vh)); }
+}
+@media (prefers-reduced-motion: reduce) { ::view-transition-new(root) { animation-duration: 1ms; } }
 
 /* Halaman Utama Widescreen Desktop */
 .halaman-utama {

@@ -26,6 +26,7 @@
     <!-- CSS Eksternal Terpadu (Sesuai Struktur UTS: css/style.css) -->
     <link rel="stylesheet" href="css/style.css?v=smooth">
     <link rel="stylesheet" href="style.css?v=smooth">
+    <script>try{var t=localStorage.getItem("kopi-senja-theme");if(t==="dark")document.documentElement.dataset.theme="dark";}catch(e){}document.documentElement.classList.add("no-transition");</script>
 </head>
 
 
@@ -50,9 +51,7 @@
                 <a href="tentang.html">Tentang Kami</a>
                 <a href="kontak.html">Lokasi &amp; Kontak</a>
             </nav>
-            <div class="lang-switch" title="Pilihan Bahasa">
-                <strong class="lang-active">ID</strong> | <span class="lang-inactive">EN</span>
-            </div>
+            <div class="theme-toggle-root" data-theme-toggle-root></div>
         </div>
     </header>
 
@@ -802,6 +801,8 @@
         crossorigin="anonymous"></script>
 
     <!-- JavaScript Terpadu -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
     <script src="script.js?v=smooth"></script>
 
 </body>

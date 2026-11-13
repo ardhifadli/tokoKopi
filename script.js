@@ -5,6 +5,12 @@
  */
 
 document.addEventListener('DOMContentLoaded', function () {
+    // Cabut no-transition setelah paint pertama selesai agar transisi berikutnya normal
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+        document.documentElement.classList.remove('no-transition');
+    }));
+
+    initThemeToggle();
     initHeroParallaxTuku();
     initMenuFilter();
     initKasirMandiri();
@@ -911,4 +917,76 @@ function initHeroParallaxTuku() {
         // Jalankan animasi saat halaman dimuat
         renderLoop();
     });
+}
+
+
+/* Pilih tema terang/gelap, ingat pilihan antarhalaman dan kunjungan. */
+function initThemeToggle() {
+    const roots = document.querySelectorAll('[data-theme-toggle-root]');
+    if (!roots.length || !window.React || !window.ReactDOM) return;
+
+    let theme = 'light';
+    try {
+        theme = localStorage.getItem('kopi-senja-theme') || 'light';
+    } catch (error) {
+        // Tetap izinkan pergantian tema saat penyimpanan browser tidak tersedia.
+    }
+
+    function applyTheme(value, button) {
+        theme = value === 'dark' ? 'dark' : 'light';
+        const update = () => { document.documentElement.dataset.theme = theme; };
+        if (document.startViewTransition && button) {
+            const rect = button.getBoundingClientRect();
+            const x = rect.left + rect.width / 2;
+            const y = rect.top + rect.height / 2;
+            const radius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+            document.documentElement.style.setProperty('--theme-x', `${x}px`);
+            document.documentElement.style.setProperty('--theme-y', `${y}px`);
+            document.documentElement.style.setProperty('--theme-radius', `${radius}px`);
+            document.startViewTransition(update);
+        } else { update(); }
+        try { localStorage.setItem('kopi-senja-theme', theme); } catch (error) { /* Penyimpanan opsional. */ }
+    }
+
+    const h = window.React.createElement;
+    function ThemeToggle() {
+        const [dark, setDark] = window.React.useState(theme === 'dark');
+        function toggle(event) {
+            const nextDark = !dark;
+            applyTheme(nextDark ? 'dark' : 'light', event.currentTarget);
+            setDark(nextDark);
+        }
+        const svgMoon = h('svg', {
+            xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24',
+            width: '14', height: '14', fill: 'currentColor', 'aria-hidden': 'true'
+        }, h('path', { d: 'M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z' }));
+
+        const svgSun = h('svg', {
+            xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24',
+            width: '14', height: '14', fill: 'none', stroke: 'currentColor',
+            strokeWidth: '2', strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': 'true'
+        },
+            h('circle', { cx: '12', cy: '12', r: '5' }),
+            h('line', { x1: '12', y1: '1', x2: '12', y2: '3' }),
+            h('line', { x1: '12', y1: '21', x2: '12', y2: '23' }),
+            h('line', { x1: '4.22', y1: '4.22', x2: '5.64', y2: '5.64' }),
+            h('line', { x1: '18.36', y1: '18.36', x2: '19.78', y2: '19.78' }),
+            h('line', { x1: '1', y1: '12', x2: '3', y2: '12' }),
+            h('line', { x1: '21', y1: '12', x2: '23', y2: '12' }),
+            h('line', { x1: '4.22', y1: '19.78', x2: '5.64', y2: '18.36' }),
+            h('line', { x1: '18.36', y1: '5.64', x2: '19.78', y2: '4.22' })
+        );
+
+        return h('button', {
+            className: 'theme-switch', type: 'button', role: 'switch',
+            'aria-checked': String(dark),
+            'aria-label': dark ? 'Tema gelap aktif; alihkan ke cerah' : 'Tema cerah aktif; alihkan ke gelap',
+            onClick: toggle
+        },
+            h('span', { className: 'theme-switch-thumb', 'aria-hidden': 'true' },
+                dark ? svgMoon : svgSun
+            )
+        );
+    }
+    roots.forEach(root => window.ReactDOM.createRoot(root).render(h(ThemeToggle)));
 }
